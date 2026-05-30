@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " # ",
+        "#T.",
+        " .#"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:iron_ingot"
+        },
+        "T": {
+            "item": "tgturing-game:test_item"
+        },
+        ".": {
+            "item": "minecraft:redstone"
+        }
+    },
+    "result": {
+        "id": "tgturing-game:wrench"
+    }
+}

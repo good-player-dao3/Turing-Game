@@ -1,0 +1,11 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "tgturing-game:test_item"
+        }
+    ],
+    "result": {
+        "id": "tgturing-game:test_food"
+    }
+}
