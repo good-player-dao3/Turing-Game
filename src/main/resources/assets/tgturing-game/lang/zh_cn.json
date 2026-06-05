@@ -1,10 +1,14 @@
 {
     "item.tgturing-game.test_item": "滚木",
-    "itemTooltip.tgturing-game.test_item_1": "何意为？",
+    "itemTooltip.tgturing-game.test_item_1": "万恶之源——滚木",
 
     "item.tgturing-game.test_food": "大饼",
+    "itemTooltip.tgturing-game.test_food_1": "何意为？",
 
     "item.tgturing-game.wrench": "扳手",
+    "itemTooltip.tgturing-game.wrench_1": "[Shift+右键]可以拆卸方块",
+
+    "block.tgturing-game.test_block": "滚木方块",
 
     "itemGroup.tgturing-game.group": "图灵游戏"
 }

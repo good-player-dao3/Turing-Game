@@ -1,11 +1,9 @@
-package turing.game.Items.Custom;
+package turing.game.Nodes.Custom;
 
-import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
-import org.w3c.dom.Text;
 import turing.game.TGTuringGame;
 
 import java.util.List;
@@ -13,13 +11,11 @@ import java.util.List;
 public class test_item extends Item {
     public test_item(Properties settings) {
         super(settings);
-        TGTuringGame.LOGGER.info("Start test_item");
     }
 
     @Override
     public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltip, TooltipFlag type) {
-        TGTuringGame.LOGGER.info("Use appendHoverText!");
+        TGTuringGame.LOGGER.info("Test item Append!");
         tooltip.addLast(Component.translatable("itemTooltip.tgturing-game.test_item_1")/*.withStyle(ChatFormatting.GOLD)*/);
-        TGTuringGame.LOGGER.info(tooltip.getLast().toString());
     }
 }

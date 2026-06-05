@@ -1,17 +1,15 @@
-package turing.game.Items.Items;
+package turing.game.Nodes.Items;
 
-import net.fabricmc.fabric.api.item.v1.FabricItem;
 import net.minecraft.core.Registry;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.*;
-import turing.game.Items.Custom.test_item;
-import turing.game.Items.Groups;
+import turing.game.Nodes.Custom.test_food;
+import turing.game.Nodes.Custom.wrench;
+import turing.game.Nodes.Groups;
 import turing.game.TGTuringGame;
 import net.minecraft.world.food.FoodProperties;
-
-import java.awt.*;
 
 public class Items
 {
@@ -30,24 +28,23 @@ public class Items
     }
 
     public static final Item TEST_ITEM = register(
-            new test_item(new Item.Properties()),
+            new Item(new Item.Properties()),
             "test_item"
     );
 
     public static final Item WRENCH = register(
-            new Item(new Item.Properties().component(DataComponents.MAX_STACK_SIZE,1)),
+            new wrench(new Item.Properties().component(DataComponents.MAX_STACK_SIZE,1)),
             "wrench"
     );
 
     public static final Item TEST_FOOD = register(
-            new Item(
+            new test_food(
                     new Item.Properties().food(
                             new FoodProperties.Builder()
                                     .nutrition(1)
                                     .build()
                     )
-            )
-            ,
+            ),
             "test_food"
     );
 

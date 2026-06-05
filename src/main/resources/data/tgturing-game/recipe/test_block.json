@@ -1,7 +1,9 @@
 {
     "type": "minecraft:crafting_shaped",
     "pattern": [
-        "#"
+        "###",
+        "###",
+        "###"
     ],
     "key": {
         "#": {
@@ -9,6 +11,7 @@
         }
     },
     "result": {
-        "id": "tgturing-game:test_food"
+        "id": "tgturing-game:test_block",
+        "count": 9
     }
 }

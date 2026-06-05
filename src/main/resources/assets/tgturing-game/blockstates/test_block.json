@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "": {
+            "model": "tgturing-game:block/test_block"
+        }
+    }
+}

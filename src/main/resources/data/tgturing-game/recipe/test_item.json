@@ -10,6 +10,7 @@
         }
     },
     "result": {
-        "id": "tgturing-game:test_item"
+        "id": "tgturing-game:test_item",
+        "count": 4
     }
 }

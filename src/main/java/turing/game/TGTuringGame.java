@@ -5,7 +5,7 @@ import org.slf4j.LoggerFactory;
 
 import net.fabricmc.api.ModInitializer;
 
-import turing.game.Items.ExampleClass;
+import turing.game.Nodes.ExampleClass;
 
 public class TGTuringGame implements ModInitializer {
 	public static final String MOD_ID = "tgturing-game";
