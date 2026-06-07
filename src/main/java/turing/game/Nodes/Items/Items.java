@@ -5,20 +5,18 @@ import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.*;
-import turing.game.Nodes.Custom.test_food;
-import turing.game.Nodes.Custom.wrench;
-import turing.game.Nodes.Groups;
+import turing.game.Nodes.Items.Custom.test_food;
+import turing.game.Nodes.Items.Custom.wrench;
+import turing.game.Nodes.Groups.Groups;
 import turing.game.TGTuringGame;
 import net.minecraft.world.food.FoodProperties;
 
 public class Items
 {
-    static final String modName = TGTuringGame.MOD_ID;
-
     public static Item register(Item item,String id)
     {
         // Create the identifier for the item.
-		ResourceLocation itemID = ResourceLocation.fromNamespaceAndPath(modName, id);
+		ResourceLocation itemID = ResourceLocation.fromNamespaceAndPath(TGTuringGame.MOD_ID, id);
 
 		// Register the item.
 		Item registeredItem = Registry.register(BuiltInRegistries.ITEM, itemID, item);

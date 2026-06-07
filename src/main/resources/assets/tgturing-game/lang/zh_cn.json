@@ -10,5 +10,10 @@
 
     "block.tgturing-game.test_block": "滚木方块",
 
+    "block.tgturing-game.arrow_block": "箭头方块",
+    "itemTooltip.tgturing-game.arrow_block_1": "[右键]可以改变方向",
+    "itemTooltip.tgturing-game.arrow_block_2": "[红石脉冲]也可以改变方向",
+    "itemTooltip.tgturing-game.arrow_block_3": "可以被[比较器]检测当前状态",
+
     "itemGroup.tgturing-game.group": "图灵游戏"
 }

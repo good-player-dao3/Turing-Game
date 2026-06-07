@@ -1,4 +1,4 @@
-package turing.game.Nodes.Custom;
+package turing.game.Nodes.Items.Custom;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
@@ -49,12 +49,10 @@ public class wrench extends Item {
                     ItemStack stack = new ItemStack(block.asItem());
                     if(e.getInventory().add(stack))
                     {
-                        TGTuringGame.LOGGER.info("Add Stack");
                         world.destroyBlock(Pos,false,e);
                     }
                     else
                     {
-                        TGTuringGame.LOGGER.info("Do not Add");
                         world.destroyBlock(Pos,true,e);
                     }
                 }

@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "###",
+        "#.#",
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "tgturing-game:test_block"
+        },
+        ".": {
+            "item": "minecraft:redstone"
+        }
+    },
+    "result": {
+        "id": "tgturing-game:arrow_block"
+    }
+}

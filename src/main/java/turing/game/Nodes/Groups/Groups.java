@@ -1,4 +1,4 @@
-package turing.game.Nodes;
+package turing.game.Nodes.Groups;
 
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;

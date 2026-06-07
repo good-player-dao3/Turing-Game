@@ -6,14 +6,12 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.SoundType;
-import net.minecraft.world.level.block.state.BlockBehaviour;
-import turing.game.Nodes.Groups;
+import turing.game.Nodes.Blocks.OtherBlock.other_block;
+import turing.game.Nodes.Groups.Groups;
 import turing.game.TGTuringGame;
 
 public class Blocks {
     public static Block register(Block block, String name, boolean shouldRegisterItem) {
-
         ResourceLocation id = ResourceLocation.fromNamespaceAndPath(TGTuringGame.MOD_ID, name);
         if (shouldRegisterItem) {
             BlockItem blockItem = new BlockItem(block, new Item.Properties());
@@ -23,17 +21,6 @@ public class Blocks {
         return Registry.register(BuiltInRegistries.BLOCK, id, block);
     }
 
-    public final static Block TEST_BLOCK = addInGroup(
-            register(
-                    new Block(BlockBehaviour.Properties.of()
-                            .strength(3.0f)
-                            .sound(SoundType.WOOD)
-                    ),
-                    "test_block",
-                    true
-            )
-    );
-
     public static Block addInGroup(Block block)
     {
         Groups.AddItem(new Item[]{block.asItem()});
@@ -42,6 +29,6 @@ public class Blocks {
 
     public static void initialize()
     {
-
+        other_block.initialize();
     }
 }
