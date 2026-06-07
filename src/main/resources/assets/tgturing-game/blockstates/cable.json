@@ -1,7 +1,26 @@
 {
-    "variants": {
-        "": {
-            "model": "tgturing-game:block/cable"
-        }
-    }
+    "multipart": [
+        {
+            "when": {
+                "OR": [
+                    {
+                        "north": "true"
+                    },
+                    {
+                        "north": "false"
+                    }
+                ]
+            },
+            "apply": {
+                "model": "tgturing-game:block/cable_main",
+                "uvlock": true
+            }
+        },
+        { "when": { "north": "true" }, "apply": { "model": "tgturing-game:block/cable_connection", "y": 0 } },
+        { "when": { "south": "true" }, "apply": { "model": "tgturing-game:block/cable_connection", "y": 180 } },
+        { "when": { "east": "true" }, "apply": { "model": "tgturing-game:block/cable_connection", "y": 90 } },
+        { "when": { "west": "true" }, "apply": { "model": "tgturing-game:block/cable_connection", "y": 270 } },
+        { "when": { "up": "true" }, "apply": { "model": "tgturing-game:block/cable_connection_up" } },
+        { "when": { "down": "true" }, "apply": { "model": "tgturing-game:block/cable_connection_up", "x": 180 } }
+    ]
 }

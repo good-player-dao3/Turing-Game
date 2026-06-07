@@ -6,6 +6,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import turing.game.Nodes.Blocks.Cable.Cable;
 import turing.game.Nodes.Blocks.OtherBlock.other_block;
 import turing.game.Nodes.Groups.Groups;
 import turing.game.TGTuringGame;
@@ -30,5 +31,6 @@ public class Blocks {
     public static void initialize()
     {
         other_block.initialize();
+        Cable.initialize();
     }
 }

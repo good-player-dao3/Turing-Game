@@ -1,0 +1,26 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#o#",
+        "=.=",
+        "#o#"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:glass"
+        },
+        "o": {
+            "item": "minecraft:quartz"
+        },
+        "=": {
+            "item": "minecraft:iron_ingot"
+        },
+        ".": {
+            "item": "minecraft:redstone"
+        }
+    },
+    "result": {
+        "id": "tgturing-game:cable",
+        "count": 16
+    }
+}

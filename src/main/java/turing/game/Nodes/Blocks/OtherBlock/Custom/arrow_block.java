@@ -1,4 +1,4 @@
-package turing.game.Nodes.Blocks.Custom;
+package turing.game.Nodes.Blocks.OtherBlock.Custom;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.data.worldgen.features.MiscOverworldFeatures;

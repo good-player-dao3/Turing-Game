@@ -8,8 +8,8 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import turing.game.Nodes.Blocks.Blocks;
-import turing.game.Nodes.Blocks.Custom.arrow_block;
-import turing.game.Nodes.Blocks.Custom.arrow_block_item;
+import turing.game.Nodes.Blocks.OtherBlock.Custom.arrow_block;
+import turing.game.Nodes.Blocks.OtherBlock.Custom.arrow_block_item;
 
 public class other_block {
     public final static Block TEST_BLOCK = Blocks.addInGroup(
