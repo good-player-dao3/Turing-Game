@@ -3,6 +3,7 @@ package turing.game.Nodes.Blocks.Cable;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.material.PushReaction;
 import turing.game.Nodes.Blocks.Blocks;
 import turing.game.Nodes.Blocks.Cable.Custom.Cable_block;
 
@@ -10,6 +11,7 @@ public class Cable {
     public static final Block CABLE = Blocks.addInGroup(
             Blocks.register(
                     new Cable_block(BlockBehaviour.Properties.of()
+                            .pushReaction(PushReaction.BLOCK)
                             .noOcclusion()
                             .strength(0.5f)
                             .sound(SoundType.GLASS)

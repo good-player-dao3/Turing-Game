@@ -5,6 +5,7 @@ import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.*;
+import turing.game.Nodes.Items.Custom.get_static_stick;
 import turing.game.Nodes.Items.Custom.test_food;
 import turing.game.Nodes.Items.Custom.wrench;
 import turing.game.Nodes.Groups.Groups;
@@ -30,6 +31,11 @@ public class Items
             "test_item"
     );
 
+    public static final Item GET_STATIC_STICK = register(
+            new get_static_stick(new Item.Properties()),
+            "get_static_stick"
+    );
+
     public static final Item WRENCH = register(
             new wrench(new Item.Properties().component(DataComponents.MAX_STACK_SIZE,1)),
             "wrench"
@@ -51,7 +57,8 @@ public class Items
         Groups.AddItem(new Item[]{
                 Items.TEST_ITEM,
                 Items.TEST_FOOD,
-                Items.WRENCH
+                Items.WRENCH,
+                Items.GET_STATIC_STICK
         });
     }
 }

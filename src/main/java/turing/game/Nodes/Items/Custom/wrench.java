@@ -39,8 +39,6 @@ public class wrench extends Item {
             BlockState blockState = world.getBlockState(Pos);
             Block block = blockState.getBlock();
 
-            TGTuringGame.LOGGER.info(block.getDescriptionId());
-            TGTuringGame.LOGGER.info(block.getDescriptionId().substring(0,19));
             if(block.getDescriptionId().substring(0,19).equals("block.tgturing-game"))
             {
                 boolean isCreate = e.isCreative();

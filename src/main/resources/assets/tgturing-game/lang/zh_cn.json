@@ -17,5 +17,7 @@
 
     "block.tgturing-game.cable": "导管",
 
+    "item.tgturing-game.get_static_stick": "状态权杖",
+
     "itemGroup.tgturing-game.group": "图灵游戏"
 }
