@@ -1,7 +1,9 @@
 package turing.game.Nodes.Items.Custom;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
@@ -12,6 +14,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.storage.loot.LootContext;
+import net.minecraft.world.phys.Vec3;
 import org.jetbrains.annotations.NotNull;
 import turing.game.TGTuringGame;
 
@@ -32,27 +35,22 @@ public class wrench extends Item {
     public @NotNull InteractionResult useOn(UseOnContext useOnContext) {
         Level world = useOnContext.getLevel();
         Player e = useOnContext.getPlayer();
-        if(e != null && !world.isClientSide && e.isCrouching())
+        if(e != null && !world.isClientSide)
         {
             //Get
             BlockPos Pos = useOnContext.getClickedPos();
             BlockState blockState = world.getBlockState(Pos);
             Block block = blockState.getBlock();
 
-            if(block.getDescriptionId().substring(0,19).equals("block.tgturing-game"))
+            ResourceLocation BLOCK_ID = BuiltInRegistries.BLOCK.getKey(block);
+
+            if(e.isCrouching() && BLOCK_ID.getNamespace().equals("tgturing-game"))
             {
                 boolean isCreate = e.isCreative();
                 if(!isCreate)
                 {
                     ItemStack stack = new ItemStack(block.asItem());
-                    if(e.getInventory().add(stack))
-                    {
-                        world.destroyBlock(Pos,false,e);
-                    }
-                    else
-                    {
-                        world.destroyBlock(Pos,true,e);
-                    }
+                    world.destroyBlock(Pos,!e.getInventory().add(stack),e);
                 }
                 else
                     world.destroyBlock(Pos,false,e);

@@ -1,21 +1,20 @@
 {
     "multipart": [
-        {
-            "when": {
-                "OR": [
-                    {
-                        "north": "true"
-                    },
-                    {
-                        "north": "false"
-                    }
-                ]
-            },
-            "apply": {
-                "model": "tgturing-game:block/cable_main",
-                "uvlock": true
-            }
-        },
+
+        { "when": { "north_connect": "true" }, "apply": { "model": "tgturing-game:block/cable_main_connect", "y": 0 } },
+        { "when": { "east_connect": "true" }, "apply": { "model": "tgturing-game:block/cable_main_connect", "y": 90 } },
+        { "when": { "south_connect": "true" }, "apply": { "model": "tgturing-game:block/cable_main_connect", "y": 180 } },
+        { "when": { "west_connect": "true" }, "apply": { "model": "tgturing-game:block/cable_main_connect", "y": 270 } },
+        { "when": { "up_connect": "true" }, "apply": { "model": "tgturing-game:block/cable_main_connect", "x": -90 } },
+        { "when": { "down_connect": "true" }, "apply": { "model": "tgturing-game:block/cable_main_connect", "x": 90 } },
+
+        { "when": { "north_connect": "false" }, "apply": { "model": "tgturing-game:block/cable_main_unconnect", "y": 0 } },
+        { "when": { "east_connect": "false" }, "apply": { "model": "tgturing-game:block/cable_main_unconnect", "y": 90 } },
+        { "when": { "south_connect": "false" }, "apply": { "model": "tgturing-game:block/cable_main_unconnect", "y": 180 } },
+        { "when": { "west_connect": "false" }, "apply": { "model": "tgturing-game:block/cable_main_unconnect", "y": 270 } },
+        { "when": { "up_connect": "false" }, "apply": { "model": "tgturing-game:block/cable_main_unconnect", "x": -90 } },
+        { "when": { "down_connect": "false" }, "apply": { "model": "tgturing-game:block/cable_main_unconnect", "x": 90 } },
+
         { "when": { "north": "true" }, "apply": { "model": "tgturing-game:block/cable_connection", "y": 0 } },
         { "when": { "south": "true" }, "apply": { "model": "tgturing-game:block/cable_connection", "y": 180 } },
         { "when": { "east": "true" }, "apply": { "model": "tgturing-game:block/cable_connection", "y": 90 } },
