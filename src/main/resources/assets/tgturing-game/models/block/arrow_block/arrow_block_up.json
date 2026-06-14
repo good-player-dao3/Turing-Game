@@ -1,6 +1,6 @@
 {
     "parent": "block/cube_all",
     "textures": {
-        "all": "tgturing-game:block/arrow_left"
+        "all": "tgturing-game:block/arrow_block/arrow_up"
     }
 }

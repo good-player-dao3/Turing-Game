@@ -1,0 +1,17 @@
+{
+    "variants": {
+        "cable_power=false,facing=north": {"model": "tgturing-game:block/button_block/button_block_off"},
+        "cable_power=false,facing=south": {"model": "tgturing-game:block/button_block/button_block_off","y": 180},
+        "cable_power=false,facing=east": {"model": "tgturing-game:block/button_block/button_block_off","y": 90},
+        "cable_power=false,facing=west": {"model": "tgturing-game:block/button_block/button_block_off","y": 270},
+        "cable_power=false,facing=up": {"model": "tgturing-game:block/button_block/button_block_off","x": -90},
+        "cable_power=false,facing=down": {"model": "tgturing-game:block/button_block/button_block_off","x": 90},
+
+        "cable_power=true,facing=north": {"model": "tgturing-game:block/button_block/button_block_on","y": 180},
+        "cable_power=true,facing=south": {"model": "tgturing-game:block/button_block/button_block_on"},
+        "cable_power=true,facing=east": {"model": "tgturing-game:block/button_block/button_block_on","y": 270},
+        "cable_power=true,facing=west": {"model": "tgturing-game:block/button_block/button_block_on","y": 90},
+        "cable_power=true,facing=up": {"model": "tgturing-game:block/button_block/button_block_on","x": -90,"y": 180},
+        "cable_power=true,facing=down": {"model": "tgturing-game:block/button_block/button_block_on","x": 90,"y": 180}
+    }
+}

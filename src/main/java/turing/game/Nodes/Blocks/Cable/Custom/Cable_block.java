@@ -3,42 +3,36 @@ package turing.game.Nodes.Blocks.Cable.Custom;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.state.StateDefinition;
-import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraft.world.phys.shapes.Shapes;
 import org.jetbrains.annotations.NotNull;
+import turing.game.Nodes.Blocks.Cable.Custom.Base.Custom_BaseBlock;
 import turing.game.TGTuringGame;
-
-import java.util.Optional;
 
 import turing.game.Nodes.Items.Items;
 import turing.game.Tools.Tools;
 
-public class Cable_block extends Block {
+import java.util.Optional;
+
+public class Cable_block extends Custom_BaseBlock {
     public Cable_block(BlockBehaviour.Properties properties)
     {
         super(properties);
-        setting();
+        init();
     }
     //设置
-    private void setting()
+    private void init()
     {
         registerDefaultState(defaultBlockState()
-                .setValue(NORTH,false)
-                .setValue(SOUTH,false)
-                .setValue(WEST,false)
-                .setValue(EAST,false)
-                .setValue(UP,false)
-                .setValue(DOWN,false)
                 .setValue(NORTH_CONNECT,true)
                 .setValue(SOUTH_CONNECT,true)
                 .setValue(WEST_CONNECT,true)
@@ -64,40 +58,6 @@ public class Cable_block extends Block {
                 Ans = Shapes.or(Ans,SHAPE_DOWN);
             VoxelShapes[i] = Ans;
         }
-    }
-
-    //方块状态
-    public static final BooleanProperty NORTH = BooleanProperty.create("north");
-    public static final BooleanProperty EAST = BooleanProperty.create("east");
-    public static final BooleanProperty SOUTH = BooleanProperty.create("south");
-    public static final BooleanProperty WEST = BooleanProperty.create("west");
-    public static final BooleanProperty UP = BooleanProperty.create("up");
-    public static final BooleanProperty DOWN = BooleanProperty.create("down");
-
-    public static final BooleanProperty NORTH_CONNECT = BooleanProperty.create("north_connect");
-    public static final BooleanProperty EAST_CONNECT = BooleanProperty.create("east_connect");
-    public static final BooleanProperty SOUTH_CONNECT = BooleanProperty.create("south_connect");
-    public static final BooleanProperty WEST_CONNECT = BooleanProperty.create("west_connect");
-    public static final BooleanProperty UP_CONNECT = BooleanProperty.create("up_connect");
-    public static final BooleanProperty DOWN_CONNECT = BooleanProperty.create("down_connect");
-
-    @Override
-    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder)
-    {
-        builder.add(
-                NORTH,
-                EAST,
-                SOUTH,
-                WEST,
-                UP,
-                DOWN,
-                NORTH_CONNECT,
-                EAST_CONNECT,
-                SOUTH_CONNECT,
-                WEST_CONNECT,
-                UP_CONNECT,
-                DOWN_CONNECT
-        );
     }
 
     @Override
@@ -181,30 +141,5 @@ public class Cable_block extends Block {
             num|=0b100000;
         }
         return VoxelShapes[num];
-    }
-    //NC更新
-    @Override
-    protected void neighborChanged(BlockState state, Level level, BlockPos blockPos, Block block, BlockPos blockPos2, boolean bl) {
-        if(level.isClientSide())
-            return;
-        TGTuringGame.LOGGER.info("Update me");
-        BlockState newState = state
-                .setValue(NORTH,canConnectTo(level.getBlockState(blockPos.north()),SOUTH_CONNECT,state,NORTH_CONNECT))
-                .setValue(SOUTH,canConnectTo(level.getBlockState(blockPos.south()),NORTH_CONNECT,state,SOUTH_CONNECT))
-                .setValue(WEST,canConnectTo(level.getBlockState(blockPos.west()),EAST_CONNECT,state,WEST_CONNECT))
-                .setValue(EAST,canConnectTo(level.getBlockState(blockPos.east()),WEST_CONNECT,state,EAST_CONNECT))
-                .setValue(UP,canConnectTo(level.getBlockState(blockPos.above()),DOWN_CONNECT,state,UP_CONNECT))
-                .setValue(DOWN,canConnectTo(level.getBlockState(blockPos.below()),UP_CONNECT,state,DOWN_CONNECT));
-        if(!newState.equals(state))
-        {
-            level.setBlockAndUpdate(blockPos,newState);
-        }
-    }
-
-    private boolean canConnectTo(BlockState neighborState, BooleanProperty To, BlockState State, BooleanProperty Me)
-    {
-        Optional<Boolean> value_to = neighborState.getOptionalValue(To);
-        Optional<Boolean> value_me = State.getOptionalValue(Me);
-        return value_to.isPresent() && value_to.get() && value_me.isPresent() && value_me.get();
     }
 }

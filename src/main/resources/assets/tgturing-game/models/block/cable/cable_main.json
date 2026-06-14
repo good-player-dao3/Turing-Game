@@ -2,8 +2,8 @@
 	"format_version": "1.21.1",
 	"credit": "Made with Blockbench",
 	"textures": {
-		"2": "tgturing-game:block/cable_main",
-		"particle": "tgturing-game:block/cable_main"
+		"2": "tgturing-game:block/cable/cable_main",
+		"particle": "tgturing-game:block/cable/cable_main"
 	},
 	"elements": [
 		{

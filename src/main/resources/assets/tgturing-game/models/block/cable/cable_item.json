@@ -1,8 +1,8 @@
 {
 	"textures": {
-		"side": "tgturing-game:block/cable_connection",
-		"center": "tgturing-game:block/cable_main",
-		"particle": "tgturing-game:block/cable_connection"
+		"side": "tgturing-game:block/cable/cable_connection",
+		"center": "tgturing-game:block/cable/cable_main",
+		"particle": "tgturing-game:block/cable/cable_connection"
 	},
 	"elements": [
 		{

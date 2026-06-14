@@ -19,5 +19,9 @@
 
     "item.tgturing-game.get_static_stick": "状态权杖",
 
+    "block.tgturing-game.button_block": "按钮",
+
+    "block.tgturing-game.cable_lamp": "灯",
+
     "itemGroup.tgturing-game.group": "图灵游戏"
 }

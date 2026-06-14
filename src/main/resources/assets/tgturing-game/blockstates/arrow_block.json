@@ -1,16 +1,16 @@
 {
     "variants": {
         "direction=0": {
-            "model":"tgturing-game:block/arrow_block_left"
+            "model":"tgturing-game:block/arrow_block/arrow_block_left"
         },
         "direction=1": {
-            "model":"tgturing-game:block/arrow_block_down"
+            "model":"tgturing-game:block/arrow_block/arrow_block_down"
         },
         "direction=2": {
-            "model":"tgturing-game:block/arrow_block_right"
+            "model":"tgturing-game:block/arrow_block/arrow_block_right"
         },
         "direction=3": {
-            "model":"tgturing-game:block/arrow_block_up"
+            "model":"tgturing-game:block/arrow_block/arrow_block_up"
         }
     }
 }

@@ -35,7 +35,7 @@ public class wrench extends Item {
     public @NotNull InteractionResult useOn(UseOnContext useOnContext) {
         Level world = useOnContext.getLevel();
         Player e = useOnContext.getPlayer();
-        if(e != null && !world.isClientSide)
+        if(e != null)
         {
             //Get
             BlockPos Pos = useOnContext.getClickedPos();

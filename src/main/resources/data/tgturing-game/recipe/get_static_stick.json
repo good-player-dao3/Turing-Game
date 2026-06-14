@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "  .",
+        " T ",
+        "I  "
+    ],
+    "key": {
+        "I": {
+            "item": "minecraft:stick"
+        },
+        "T": {
+            "item": "tgturing-game:test_item"
+        },
+        ".": {
+            "item": "minecraft:redstone"
+        }
+    },
+    "result": {
+        "id": "tgturing-game:get_static_stick"
+    }
+}

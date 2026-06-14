@@ -5,7 +5,9 @@ import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.PushReaction;
 import turing.game.Nodes.Blocks.Blocks;
+import turing.game.Nodes.Blocks.Cable.Custom.Button_block;
 import turing.game.Nodes.Blocks.Cable.Custom.Cable_block;
+import turing.game.Nodes.Blocks.Cable.Custom.Cable_lamp;
 
 public class Cable {
     public static final Block CABLE = Blocks.addInGroup(
@@ -17,6 +19,30 @@ public class Cable {
                             .sound(SoundType.GLASS)
                     ),
                     "cable",
+                    true
+            )
+    );
+
+    public static final Block BUTTON_BLOCK = Blocks.addInGroup(
+            Blocks.register(
+                    new Button_block(BlockBehaviour.Properties.of()
+                            .pushReaction(PushReaction.BLOCK)
+                            .strength(0.5f)
+                            .sound(SoundType.GLASS)
+                    ),
+                    "button_block",
+                    true
+            )
+    );
+
+    public static final Block CABLE_LAMP = Blocks.addInGroup(
+            Blocks.register(
+                    new Cable_lamp(BlockBehaviour.Properties.of()
+                            .pushReaction(PushReaction.BLOCK)
+                            .strength(0.5f)
+                            .sound(SoundType.GLASS)
+                    ),
+                    "cable_lamp",
                     true
             )
     );
