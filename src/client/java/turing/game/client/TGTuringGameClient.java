@@ -11,5 +11,6 @@ public class TGTuringGameClient implements ClientModInitializer {
 		// This entrypoint is suitable for setting up client-specific logic, such as rendering.
 
 		BlockRenderLayerMap.INSTANCE.putBlock(Cable.CABLE,RenderType.cutout());
+		BlockRenderLayerMap.INSTANCE.putBlock(Cable.GAT,RenderType.cutout());
 	}
 }

@@ -46,7 +46,7 @@ public class get_static_stick extends Item {
                 ChatFormatting ans = ChatFormatting.WHITE;
 
                 String str = value.getClass().getSimpleName();
-                TGTuringGame.LOGGER.info("Type:"+str);
+                //TGTuringGame.LOGGER.info("Type:"+str);
                 if(str.equals("String"))
                 {
                      ans = ChatFormatting.LIGHT_PURPLE;

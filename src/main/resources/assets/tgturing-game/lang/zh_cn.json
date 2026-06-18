@@ -23,5 +23,7 @@
 
     "block.tgturing-game.cable_lamp": "灯",
 
+    "block.tgturing-game.gat": "缓冲器",
+
     "itemGroup.tgturing-game.group": "图灵游戏"
 }

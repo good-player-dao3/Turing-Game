@@ -3,7 +3,6 @@ package turing.game.Nodes.Blocks.Cable.Custom;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
@@ -20,8 +19,6 @@ import turing.game.TGTuringGame;
 
 import turing.game.Nodes.Items.Items;
 import turing.game.Tools.Tools;
-
-import java.util.Optional;
 
 public class Cable_block extends Custom_BaseBlock {
     public Cable_block(BlockBehaviour.Properties properties)

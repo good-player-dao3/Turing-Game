@@ -1,6 +1,7 @@
 package turing.game.Nodes.Blocks.Cable.Custom.Base;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -19,25 +20,6 @@ public class Custom_BaseBlock extends Block {
         this.setting();
     }
 
-    private void setting()
-    {
-        registerDefaultState(defaultBlockState()
-                .setValue(NORTH,false)
-                .setValue(SOUTH,false)
-                .setValue(WEST,false)
-                .setValue(EAST,false)
-                .setValue(UP,false)
-                .setValue(DOWN,false)
-                .setValue(NORTH_CONNECT,false)
-                .setValue(SOUTH_CONNECT,false)
-                .setValue(WEST_CONNECT,false)
-                .setValue(EAST_CONNECT,false)
-                .setValue(UP_CONNECT,false)
-                .setValue(DOWN_CONNECT,false)
-                .setValue(CABLE_POWER,false)
-        );
-    }
-
     //属性
     public static final BooleanProperty NORTH = BooleanProperty.create("north");
     public static final BooleanProperty EAST = BooleanProperty.create("east");
@@ -54,6 +36,7 @@ public class Custom_BaseBlock extends Block {
     public static final BooleanProperty DOWN_CONNECT = BooleanProperty.create("down_connect");
 
     public static final BooleanProperty CABLE_POWER = BooleanProperty.create("cable_power");
+    public static final BooleanProperty IS_HIGH_POWER = BooleanProperty.create("is_high_power");
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder)
@@ -71,7 +54,8 @@ public class Custom_BaseBlock extends Block {
                 WEST_CONNECT,
                 UP_CONNECT,
                 DOWN_CONNECT,
-                CABLE_POWER
+                CABLE_POWER,
+                IS_HIGH_POWER
         );
         BuilderMore(builder);
     }
@@ -79,6 +63,26 @@ public class Custom_BaseBlock extends Block {
     protected void BuilderMore(StateDefinition.Builder<Block, BlockState> builder)
     {
 
+    }
+
+    private void setting()
+    {
+        registerDefaultState(defaultBlockState()
+                .setValue(NORTH,false)
+                .setValue(SOUTH,false)
+                .setValue(WEST,false)
+                .setValue(EAST,false)
+                .setValue(UP,false)
+                .setValue(DOWN,false)
+                .setValue(NORTH_CONNECT,false)
+                .setValue(SOUTH_CONNECT,false)
+                .setValue(WEST_CONNECT,false)
+                .setValue(EAST_CONNECT,false)
+                .setValue(UP_CONNECT,false)
+                .setValue(DOWN_CONNECT,false)
+                .setValue(CABLE_POWER,false)
+                .setValue(IS_HIGH_POWER,false)
+        );
     }
 
     //NC
@@ -131,8 +135,6 @@ public class Custom_BaseBlock extends Block {
         Optional<Boolean> value_me = State.getOptionalValue(Me);
         return value_to.isPresent() && value_to.get() && value_me.isPresent() && value_me.get();
     }
-
-
 
     public boolean getConnect(BlockPos blockPos, BlockPos blockPos2, BlockState state, BlockState state2)
     {

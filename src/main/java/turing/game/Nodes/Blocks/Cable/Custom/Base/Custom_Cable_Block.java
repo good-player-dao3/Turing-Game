@@ -1,17 +1,11 @@
 package turing.game.Nodes.Blocks.Cable.Custom.Base;
 
-import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.world.InteractionResult;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.context.BlockPlaceContext;
-import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
-import net.minecraft.world.phys.BlockHitResult;
-import org.jetbrains.annotations.NotNull;
 
 public class Custom_Cable_Block extends Custom_BaseBlock {
     public Custom_Cable_Block(Properties properties)
@@ -31,7 +25,7 @@ public class Custom_Cable_Block extends Custom_BaseBlock {
     private void init()
     {
         registerDefaultState(defaultBlockState()
-                .setValue(FACING, Direction.NORTH)
+                .setValue(FACING,Direction.NORTH)
         );
     }
 
@@ -43,6 +37,7 @@ public class Custom_Cable_Block extends Custom_BaseBlock {
 
     protected BlockState Start_State_More(BlockState state, BlockPlaceContext blockPlaceContext)
     {
+        //方块状态
         return state;
     }
 }
