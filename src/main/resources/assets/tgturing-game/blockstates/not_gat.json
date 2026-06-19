@@ -1,0 +1,11 @@
+{
+    "variants": {
+        "facing=north": {"model": "tgturing-game:block/gats/not_gat"},
+        "facing=south": {"model": "tgturing-game:block/gats/not_gat","y": 180},
+        "facing=east": {"model": "tgturing-game:block/gats/not_gat","y": 90},
+        "facing=west": {"model": "tgturing-game:block/gats/not_gat","y": 270},
+
+        "facing=up": {"model": "tgturing-game:block/gats/not_gat","y": 270},
+        "facing=down": {"model": "tgturing-game:block/gats/not_gat","y": 270}
+    }
+}

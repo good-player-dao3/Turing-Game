@@ -22,9 +22,6 @@ public class Custom_gats extends Custom_Cable_Block {
 
     private void init()
     {
-        registerDefaultState(defaultBlockState()
-                .setValue(IS_HIGH_POWER,true)
-        );
     }
 
     //NC
@@ -48,7 +45,7 @@ public class Custom_gats extends Custom_Cable_Block {
             if(getConnect(blockPos,blockPos2,state,state2) && state.getValue(CABLE_POWER) && !state2.getValue(CABLE_POWER))
             {
                 TGTuringGame.LOGGER.info("NC Update Output "+ state2.getValue(CABLE_POWER)+" -> "+Outputs);
-                level.setBlockAndUpdate(blockPos2, state2.setValue(CABLE_POWER,Outputs));
+                level.setBlockAndUpdate(blockPos2,state2.setValue(CABLE_POWER,Outputs));
             }
         }
         else
@@ -125,7 +122,7 @@ public class Custom_gats extends Custom_Cable_Block {
         );
         TGTuringGame.LOGGER.info("Output Pos "+newPos);
         BlockState newState = level.getBlockState(newPos);
-        if(getConnect(blockPos,newPos,state,newState) && Outputs && !newState.getValue(CABLE_POWER))
+        if(getConnect(blockPos,newPos,state,newState) && Outputs != newState.getValue(CABLE_POWER))
         {
             TGTuringGame.LOGGER.info("Update Output "+newState.getValue(CABLE_POWER)+" -> "+Outputs);
             level.setBlockAndUpdate(newPos,newState.setValue(CABLE_POWER,Outputs));

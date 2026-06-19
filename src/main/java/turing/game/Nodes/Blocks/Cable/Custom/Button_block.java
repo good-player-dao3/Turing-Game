@@ -24,9 +24,6 @@ public class Button_block extends Custom_Cable_Block {
 
     private void init()
     {
-        registerDefaultState(defaultBlockState()
-                .setValue(IS_HIGH_POWER,true)
-        );
     }
 
     @Override

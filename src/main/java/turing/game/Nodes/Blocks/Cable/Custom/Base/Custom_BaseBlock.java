@@ -1,7 +1,8 @@
 package turing.game.Nodes.Blocks.Cable.Custom.Base;
 
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.Direction;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -36,7 +37,8 @@ public class Custom_BaseBlock extends Block {
     public static final BooleanProperty DOWN_CONNECT = BooleanProperty.create("down_connect");
 
     public static final BooleanProperty CABLE_POWER = BooleanProperty.create("cable_power");
-    public static final BooleanProperty IS_HIGH_POWER = BooleanProperty.create("is_high_power");
+
+    public static final TagKey<Block> IS_GAT_KEY = TagKey.create(Registries.BLOCK,TGTuringGame.id("is_gat"));
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder)
@@ -54,8 +56,7 @@ public class Custom_BaseBlock extends Block {
                 WEST_CONNECT,
                 UP_CONNECT,
                 DOWN_CONNECT,
-                CABLE_POWER,
-                IS_HIGH_POWER
+                CABLE_POWER
         );
         BuilderMore(builder);
     }
@@ -81,7 +82,6 @@ public class Custom_BaseBlock extends Block {
                 .setValue(UP_CONNECT,false)
                 .setValue(DOWN_CONNECT,false)
                 .setValue(CABLE_POWER,false)
-                .setValue(IS_HIGH_POWER,false)
         );
     }
 
@@ -121,9 +121,9 @@ public class Custom_BaseBlock extends Block {
         {
             return state.setValue(CABLE_POWER,false);
         }
-        else if(value.isPresent() && getConnect(blockPos,blockPos2,state,state2))
+        else if(value.isPresent() && getConnect(blockPos,blockPos2,state,state2) && !state2.is(IS_GAT_KEY))
         {
-            return state.setValue(CABLE_POWER, state2.getValue(CABLE_POWER));
+            return state.setValue(CABLE_POWER,state2.getValue(CABLE_POWER));
         }
         else
             return state;

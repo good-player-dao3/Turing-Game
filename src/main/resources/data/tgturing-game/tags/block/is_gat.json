@@ -1,0 +1,7 @@
+{
+    "replace": false,
+    "values": [
+        "tgturing-game:gat",
+        "tgturing-game:not_gat"
+    ]
+}

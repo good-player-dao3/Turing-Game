@@ -25,5 +25,7 @@
 
     "block.tgturing-game.gat": "缓冲器",
 
+    "block.tgturing-game.not_gat": "非门",
+
     "itemGroup.tgturing-game.group": "图灵游戏"
 }

@@ -5,10 +5,7 @@ import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.PushReaction;
 import turing.game.Nodes.Blocks.Blocks;
-import turing.game.Nodes.Blocks.Cable.Custom.Button_block;
-import turing.game.Nodes.Blocks.Cable.Custom.Cable_block;
-import turing.game.Nodes.Blocks.Cable.Custom.Cable_lamp;
-import turing.game.Nodes.Blocks.Cable.Custom.Gat;
+import turing.game.Nodes.Blocks.Cable.Custom.*;
 
 public class Cable {
     public static final Block CABLE = Blocks.addInGroup(
@@ -57,6 +54,19 @@ public class Cable {
                             .sound(SoundType.GLASS)
                     ),
                     "gat",
+                    true
+            )
+    );
+
+    public static final Block NOT_GAT = Blocks.addInGroup(
+            Blocks.register(
+                    new NotGat(BlockBehaviour.Properties.of()
+                            .pushReaction(PushReaction.BLOCK)
+                            .noOcclusion()
+                            .strength(0.5f)
+                            .sound(SoundType.GLASS)
+                    ),
+                    "not_gat",
                     true
             )
     );

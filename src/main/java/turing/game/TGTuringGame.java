@@ -1,5 +1,6 @@
 package turing.game;
 
+import net.minecraft.resources.ResourceLocation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -25,5 +26,10 @@ public class TGTuringGame implements ModInitializer {
 
 		ExampleClass ans = new ExampleClass();
 		ans.ExampleModels();
+	}
+
+	public static ResourceLocation id(String name)
+	{
+		return ResourceLocation.fromNamespaceAndPath(MOD_ID,name);
 	}
 }
