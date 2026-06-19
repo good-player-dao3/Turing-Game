@@ -83,14 +83,7 @@ public class Cable_block extends Custom_BaseBlock {
             {
                 if(state.getValue(IS_BOX))
                 {
-                    newState = state
-                            .setValue(IS_BOX,false)
-                            .setValue(NORTH_CONNECT,true)
-                            .setValue(SOUTH_CONNECT,true)
-                            .setValue(EAST_CONNECT,true)
-                            .setValue(WEST_CONNECT,true)
-                            .setValue(UP_CONNECT,true)
-                            .setValue(DOWN_CONNECT,true);
+                    newState = state.setValue(IS_BOX,false);
                 }
                 else
                 {

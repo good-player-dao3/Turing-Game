@@ -6,6 +6,8 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.PushReaction;
 import turing.game.Nodes.Blocks.Blocks;
 import turing.game.Nodes.Blocks.Cable.Custom.*;
+import turing.game.Nodes.Blocks.Cable.Custom.BlockEntity.EntityBlockType;
+import turing.game.Nodes.Blocks.Cable.Custom.BlockEntity.Text_Cable.Text_Cable_Block;
 
 public class Cable {
     public static final Block CABLE = Blocks.addInGroup(
@@ -110,13 +112,20 @@ public class Cable {
             )
     );
 
-    private static void setting()
-    {
-
-    }
+    public static final Block TEXT_CABLE = /*Blocks.addInGroup*/(
+            Blocks.register(
+                    new Text_Cable_Block(BlockBehaviour.Properties.of()
+                            .pushReaction(PushReaction.BLOCK)
+                            .strength(0.5f)
+                            .sound(SoundType.GLASS)
+                    ),
+                    "text_cable",
+                    true
+            )
+    );
 
     public static void initialize()
     {
-        setting();
+        EntityBlockType.initialize();
     }
 }

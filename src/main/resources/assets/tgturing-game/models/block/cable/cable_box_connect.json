@@ -3,7 +3,7 @@
 	"credit": "Made with Blockbench",
 	"textures": {
 		"0": "tgturing-game:block/cable_block_custom",
-		"particle": "tgturing-game:block/cable_block_custom"
+		"particle": "tgturing-game:block/cable_block_side"
 	},
 	"elements": [
 		{
