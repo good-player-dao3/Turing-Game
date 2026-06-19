@@ -24,8 +24,10 @@
     "block.tgturing-game.cable_lamp": "灯",
 
     "block.tgturing-game.gat": "缓冲器",
-
+    "block.tgturing-game.and_gat": "与门",
+    "block.tgturing-game.or_gat": "或门",
     "block.tgturing-game.not_gat": "非门",
+    "block.tgturing-game.xor_gat": "异或门",
 
     "itemGroup.tgturing-game.group": "图灵游戏"
 }

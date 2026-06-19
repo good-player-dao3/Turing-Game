@@ -8,6 +8,8 @@ import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.phys.shapes.Shapes;
+import net.minecraft.world.phys.shapes.VoxelShape;
 import turing.game.TGTuringGame;
 
 import java.util.Arrays;
@@ -45,7 +47,10 @@ public class Custom_gats extends Custom_Cable_Block {
             if(getConnect(blockPos,blockPos2,state,state2) && state.getValue(CABLE_POWER) && !state2.getValue(CABLE_POWER))
             {
                 TGTuringGame.LOGGER.info("NC Update Output "+ state2.getValue(CABLE_POWER)+" -> "+Outputs);
-                level.setBlockAndUpdate(blockPos2,state2.setValue(CABLE_POWER,Outputs));
+                if(!state2.is(IS_GAT_KEY))
+                    level.setBlockAndUpdate(blockPos2,state2.setValue(CABLE_POWER,Outputs));
+                else
+                    TGTuringGame.LOGGER.info("Is Gat");
             }
         }
         else
@@ -125,7 +130,10 @@ public class Custom_gats extends Custom_Cable_Block {
         if(getConnect(blockPos,newPos,state,newState) && Outputs != newState.getValue(CABLE_POWER))
         {
             TGTuringGame.LOGGER.info("Update Output "+newState.getValue(CABLE_POWER)+" -> "+Outputs);
-            level.setBlockAndUpdate(newPos,newState.setValue(CABLE_POWER,Outputs));
+            if(!newState.is(IS_GAT_KEY))
+                level.setBlockAndUpdate(newPos,newState.setValue(CABLE_POWER,Outputs));
+            else
+                TGTuringGame.LOGGER.info("Is Gat");
         }
 
         TGTuringGame.LOGGER.info("Main Load to "+ Arrays.toString(Inputs) +"->"+ Outputs+"\n");
@@ -180,6 +188,17 @@ public class Custom_gats extends Custom_Cable_Block {
             direction = direction.getClockWise();
         return direction;
     }
+
+    //碰撞箱
+    public static final VoxelShape SHAPE_MAIN = Block.box(5,5,5,11,11,11);
+
+    public static final VoxelShape SHAPE_NS = Shapes.or(SHAPE_MAIN,Block.box(6,6,0,10,10,5),Block.box(6,6,11,10,10,16));
+    public static final VoxelShape SHAPE_WE = Shapes.or(SHAPE_MAIN,Block.box(11,6,6,16,10,10),Block.box(0,6,6,5,10,10));
+
+    public static final VoxelShape SHAPE_3_NORTH = Shapes.or(SHAPE_MAIN,Block.box(6,6,0,10,10,5),Block.box(0,6,6,5,10,10),Block.box(11,6,6,16,10,10));
+    public static final VoxelShape SHAPE_3_SOUTH = Shapes.or(SHAPE_MAIN,Block.box(6,6,11,10,10,16),Block.box(0,6,6,5,10,10),Block.box(11,6,6,16,10,10));
+    public static final VoxelShape SHAPE_3_WEST = Shapes.or(SHAPE_MAIN,Block.box(0,6,6,5,10,10),Block.box(6,6,0,10,10,5),Block.box(6,6,11,10,10,16));
+    public static final VoxelShape SHAPE_3_EAST = Shapes.or(SHAPE_MAIN,Block.box(11,6,6,16,10,10),Block.box(6,6,0,10,10,5),Block.box(6,6,11,10,10,16));
 }
 /*
 

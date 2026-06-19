@@ -71,6 +71,45 @@ public class Cable {
             )
     );
 
+    public static final Block AND_GAT = Blocks.addInGroup(
+            Blocks.register(
+                    new AndGat(BlockBehaviour.Properties.of()
+                            .pushReaction(PushReaction.BLOCK)
+                            .noOcclusion()
+                            .strength(0.5f)
+                            .sound(SoundType.GLASS)
+                    ),
+                    "and_gat",
+                    true
+            )
+    );
+
+    public static final Block OR_GAT = Blocks.addInGroup(
+            Blocks.register(
+                    new OrGat(BlockBehaviour.Properties.of()
+                            .pushReaction(PushReaction.BLOCK)
+                            .noOcclusion()
+                            .strength(0.5f)
+                            .sound(SoundType.GLASS)
+                    ),
+                    "or_gat",
+                    true
+            )
+    );
+
+    public static final Block XOR_GAT = Blocks.addInGroup(
+            Blocks.register(
+                    new XorGat(BlockBehaviour.Properties.of()
+                            .pushReaction(PushReaction.BLOCK)
+                            .noOcclusion()
+                            .strength(0.5f)
+                            .sound(SoundType.GLASS)
+                    ),
+                    "xor_gat",
+                    true
+            )
+    );
+
     private static void setting()
     {
 

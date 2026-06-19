@@ -11,7 +11,7 @@
         "cable_power=true,facing=south": {"model": "tgturing-game:block/cable_lamp/cable_lamp_on"},
         "cable_power=true,facing=east": {"model": "tgturing-game:block/cable_lamp/cable_lamp_on","y": 270},
         "cable_power=true,facing=west": {"model": "tgturing-game:block/cable_lamp/cable_lamp_on","y": 90},
-        "cable_power=true,facing=up": {"model": "tgturing-game:block/cable_lamp/cable_lamp_on","x": -90,"y": 180},
-        "cable_power=true,facing=down": {"model": "tgturing-game:block/cable_lamp/cable_lamp_on","x": 90,"y": 180}
+        "cable_power=true,facing=up": {"model": "tgturing-game:block/cable_lamp/cable_lamp_on","x": 90},
+        "cable_power=true,facing=down": {"model": "tgturing-game:block/cable_lamp/cable_lamp_on","x": -90}
     }
 }

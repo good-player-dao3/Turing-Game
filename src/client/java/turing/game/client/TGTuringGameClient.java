@@ -13,5 +13,8 @@ public class TGTuringGameClient implements ClientModInitializer {
 		BlockRenderLayerMap.INSTANCE.putBlock(Cable.CABLE,RenderType.cutout());
 		BlockRenderLayerMap.INSTANCE.putBlock(Cable.GAT,RenderType.cutout());
 		BlockRenderLayerMap.INSTANCE.putBlock(Cable.NOT_GAT,RenderType.cutout());
+		BlockRenderLayerMap.INSTANCE.putBlock(Cable.AND_GAT,RenderType.cutout());
+		BlockRenderLayerMap.INSTANCE.putBlock(Cable.OR_GAT,RenderType.cutout());
+		BlockRenderLayerMap.INSTANCE.putBlock(Cable.XOR_GAT,RenderType.cutout());
 	}
 }
