@@ -33,6 +33,8 @@
 
     "block.tgturing-game.cable_power_to_redstone": "输出红石器",
     "block.tgturing-game.redstone_to_cable_power": "输入红石器",
+    
+    "block.tgturing-game.rom": "ROM",
 
     "itemGroup.tgturing-game.group": "图灵游戏"
 }

@@ -1,5 +1,7 @@
 package turing.game.Nodes.Blocks.Cable.Custom;
 
+import org.jetbrains.annotations.NotNull;
+
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.sounds.SoundEvents;
@@ -11,9 +13,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
-import org.jetbrains.annotations.NotNull;
 import turing.game.Nodes.Blocks.Cable.Custom.Base.Custom_Cable_Block;
-import turing.game.TGTuringGame;
 
 public class Button_block extends Custom_Cable_Block {
     public Button_block(Properties properties)
@@ -49,7 +49,7 @@ public class Button_block extends Custom_Cable_Block {
         if(!level.isClientSide())
         {
             BlockState state2 = level.getBlockState(blockPos2);
-            if(getConnect(blockPos,blockPos2,state,state2) && state.getValue(CABLE_POWER) && !state2.getValue(CABLE_POWER))
+            if(getConnect(blockPos,blockPos2,state,state2) && state.getValue(CABLE_POWER) && !state2.getValue(CABLE_POWER) && !state2.is(IS_GAT_KEY))
             {
                 level.setBlockAndUpdate(blockPos2,state2.setValue(CABLE_POWER,true));
             }

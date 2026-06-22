@@ -88,7 +88,7 @@ public class Redstone_to_cable_power extends Custom_Cable_Block {
             {
                 return state.setValue(CABLE_POWER,state2.getSignal(level,blockPos2,direction) > 0);
             }
-            else if(getConnect(blockPos,blockPos2,state,state2) && state.getValue(CABLE_POWER) && !state2.getValue(CABLE_POWER))
+            else if(getConnect(blockPos,blockPos2,state,state2) && state.getValue(CABLE_POWER) && !state2.getValue(CABLE_POWER) && !state2.is(IS_GAT_KEY))
             {
                 level.setBlockAndUpdate(blockPos2,state2.setValue(CABLE_POWER,true));
             }

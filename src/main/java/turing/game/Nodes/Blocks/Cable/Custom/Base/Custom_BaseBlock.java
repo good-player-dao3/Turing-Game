@@ -59,12 +59,6 @@ public abstract class Custom_BaseBlock extends Block {
                 DOWN_CONNECT,
                 CABLE_POWER
         );
-        BuilderMore(builder);
-    }
-
-    protected void BuilderMore(StateDefinition.Builder<Block, BlockState> builder)
-    {
-
     }
 
     private void setting()

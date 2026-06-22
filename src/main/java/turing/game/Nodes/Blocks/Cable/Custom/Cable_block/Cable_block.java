@@ -62,8 +62,9 @@ public class Cable_block extends Custom_BaseBlock {
 
     public static final BooleanProperty IS_BOX = BooleanProperty.create("is_box");
     @Override
-    protected void BuilderMore(StateDefinition.Builder<Block, BlockState> builder)
+    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder)
     {
+        super.createBlockStateDefinition(builder);
         builder.add(IS_BOX);
     }
 

@@ -17,8 +17,9 @@ public abstract class Custom_Cable_Block extends Custom_BaseBlock {
     public static final DirectionProperty FACING = DirectionProperty.create("facing");
 
     @Override
-    protected void BuilderMore(StateDefinition.Builder<Block, BlockState> builder)
+    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder)
     {
+        super.createBlockStateDefinition(builder);
         builder.add(FACING);
     }
     //设置

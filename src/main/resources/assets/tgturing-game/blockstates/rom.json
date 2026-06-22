@@ -1,0 +1,16 @@
+{
+    "variants": {
+        "facing=north,book=true": {"model": "tgturing-game:block/rom/rom_book"},
+        "facing=south,book=true": {"model": "tgturing-game:block/rom/rom_book","y": 180},
+        "facing=east,book=true": {"model": "tgturing-game:block/rom/rom_book","y": 90},
+        "facing=west,book=true": {"model": "tgturing-game:block/rom/rom_book","y": 270},
+
+        "facing=north,book=false": {"model": "tgturing-game:block/rom/rom_no_book"},
+        "facing=south,book=false": {"model": "tgturing-game:block/rom/rom_no_book","y": 180},
+        "facing=east,book=false": {"model": "tgturing-game:block/rom/rom_no_book","y": 90},
+        "facing=west,book=false": {"model": "tgturing-game:block/rom/rom_no_book","y": 270},
+
+        "facing=up": {"model": "tgturing-game:block/rom/rom_book","y": 270},
+        "facing=down": {"model": "tgturing-game:block/rom/rom_book","y": 270}
+    }
+}

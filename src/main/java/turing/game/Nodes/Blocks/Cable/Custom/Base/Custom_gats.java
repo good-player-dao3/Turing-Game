@@ -113,7 +113,7 @@ public abstract class Custom_gats extends Custom_Cable_Block {
             TGTuringGame.LOGGER.info("Input Pos "+newPos+":"+Inputs[i]);
         }
         //计算输出
-        boolean Outputs = Gat_Load(Inputs);
+        boolean Outputs = Gat_Load(Inputs,state,level,blockPos);
         level.setBlockAndUpdate(blockPos,state.setValue(CABLE_POWER,Outputs));
         //设置输出
         Direction directions_output = getOutput(state.getValue(FACING));
@@ -128,7 +128,9 @@ public abstract class Custom_gats extends Custom_Cable_Block {
         {
             TGTuringGame.LOGGER.info("Update Output "+newState.getValue(CABLE_POWER)+" -> "+Outputs);
             if(!newState.is(IS_GAT_KEY))
+            {
                 level.setBlockAndUpdate(newPos,newState.setValue(CABLE_POWER,Outputs));
+            }
             else
                 TGTuringGame.LOGGER.info("Is Gat");
         }
@@ -136,7 +138,7 @@ public abstract class Custom_gats extends Custom_Cable_Block {
         TGTuringGame.LOGGER.info("Main Load to "+ Arrays.toString(Inputs) +"->"+ Outputs+"\n");
     }
     /**计算结果*/
-    protected boolean Gat_Load(boolean[] Inputs)
+    protected boolean Gat_Load(boolean[] Inputs,BlockState state,Level level,BlockPos blockPos)
     {
         return false;
     }

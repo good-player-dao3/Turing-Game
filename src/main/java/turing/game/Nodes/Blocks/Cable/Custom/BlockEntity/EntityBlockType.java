@@ -7,6 +7,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import turing.game.Nodes.Blocks.Cable.Cable;
+import turing.game.Nodes.Blocks.Cable.Custom.BlockEntity.Rom.Rom_Entity;
 import turing.game.Nodes.Blocks.Cable.Custom.BlockEntity.Text_Cable.Text_Cable_Entity;
 import turing.game.TGTuringGame;
 
@@ -26,6 +27,8 @@ public class EntityBlockType {
 
     public static final BlockEntityType<Text_Cable_Entity> TEXT_CABLE_ENTITY =
             register("text_cable", Text_Cable_Entity::new,Cable.TEXT_CABLE);
+    public static final BlockEntityType<Rom_Entity> ROM_ENTITEY =
+            register("rom",Rom_Entity::new,Cable.ROM);
 
     public static void initialize() {
     }

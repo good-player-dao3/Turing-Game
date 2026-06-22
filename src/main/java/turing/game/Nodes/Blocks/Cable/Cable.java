@@ -7,6 +7,8 @@ import net.minecraft.world.level.material.PushReaction;
 import turing.game.Nodes.Blocks.Blocks;
 import turing.game.Nodes.Blocks.Cable.Custom.*;
 import turing.game.Nodes.Blocks.Cable.Custom.BlockEntity.EntityBlockType;
+import turing.game.Nodes.Blocks.Cable.Custom.BlockEntity.Rom.Rom_Block;
+import turing.game.Nodes.Blocks.Cable.Custom.BlockEntity.Rom.Rom_Entity;
 import turing.game.Nodes.Blocks.Cable.Custom.BlockEntity.Text_Cable.Text_Cable_Block;
 import turing.game.Nodes.Blocks.Cable.Custom.Cable_block.Cable_block;
 import turing.game.Nodes.Blocks.Cable.Custom.Cable_block.Cable_block_item;
@@ -120,6 +122,18 @@ public class Cable {
                             .sound(SoundType.GLASS)
                     ),
                     "text_cable",
+                    true
+            )
+    );
+
+    public static final Block ROM = Blocks.addInGroup(
+            Blocks.register(
+                    new Rom_Block(BlockBehaviour.Properties.of()
+                            .pushReaction(PushReaction.BLOCK)
+                            .strength(0.5f)
+                            .sound(SoundType.GLASS)
+                    ),
+                    "rom",
                     true
             )
     );
