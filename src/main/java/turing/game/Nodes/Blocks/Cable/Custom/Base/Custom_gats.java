@@ -11,10 +11,11 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import turing.game.TGTuringGame;
+import turing.game.Tools.Tools;
 
 import java.util.Arrays;
 
-public class Custom_gats extends Custom_Cable_Block {
+public abstract class Custom_gats extends Custom_Cable_Block {
     public Custom_gats(Properties properties)
     {
         super(properties);
@@ -35,11 +36,7 @@ public class Custom_gats extends Custom_Cable_Block {
         TGTuringGame.LOGGER.info("Update for "+blockPos2);
 
         Direction directions_output = getOutput(state.getValue(FACING));
-        BlockPos outPos = new BlockPos(
-                directions_output.getStepX()+blockPos.getX(),
-                directions_output.getStepY()+blockPos.getY(),
-                directions_output.getStepZ()+blockPos.getZ()
-        );
+        BlockPos outPos = Tools.PosAddDirection(blockPos,directions_output);
         if(outPos.equals(blockPos2))
         {
             boolean Outputs = state.getValue(CABLE_POWER);
@@ -200,6 +197,3 @@ public class Custom_gats extends Custom_Cable_Block {
     public static final VoxelShape SHAPE_3_WEST = Shapes.or(SHAPE_MAIN,Block.box(0,6,6,5,10,10),Block.box(6,6,0,10,10,5),Block.box(6,6,11,10,10,16));
     public static final VoxelShape SHAPE_3_EAST = Shapes.or(SHAPE_MAIN,Block.box(11,6,6,16,10,10),Block.box(6,6,0,10,10,5),Block.box(6,6,11,10,10,16));
 }
-/*
-
- */

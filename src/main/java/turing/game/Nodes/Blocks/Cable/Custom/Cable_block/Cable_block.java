@@ -1,4 +1,4 @@
-package turing.game.Nodes.Blocks.Cable.Custom;
+package turing.game.Nodes.Blocks.Cable.Custom.Cable_block;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.InteractionResult;
@@ -17,12 +17,10 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraft.world.phys.shapes.Shapes;
 import org.jetbrains.annotations.NotNull;
-import turing.game.Nodes.Blocks.Blocks;
 import turing.game.Nodes.Blocks.Cable.Custom.Base.Custom_BaseBlock;
 
 import turing.game.Nodes.Items.Items;
 import turing.game.Tools.Tools;
-import turing.game.Nodes.Blocks.OtherBlock.other_block;
 
 public class Cable_block extends Custom_BaseBlock {
     public Cable_block(BlockBehaviour.Properties properties)

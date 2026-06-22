@@ -27,7 +27,7 @@ public class arrow_block extends Block {
         registerDefaultState(defaultBlockState().setValue(Direction,0));
     }
 
-    public static final IntegerProperty Direction = IntegerProperty.create("direction",0,4);
+    public static final IntegerProperty Direction = IntegerProperty.create("direction",0,3);
     public static final BooleanProperty Power = BooleanProperty.create("turn_power");
 
     @Override

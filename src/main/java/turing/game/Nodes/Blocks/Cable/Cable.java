@@ -8,19 +8,19 @@ import turing.game.Nodes.Blocks.Blocks;
 import turing.game.Nodes.Blocks.Cable.Custom.*;
 import turing.game.Nodes.Blocks.Cable.Custom.BlockEntity.EntityBlockType;
 import turing.game.Nodes.Blocks.Cable.Custom.BlockEntity.Text_Cable.Text_Cable_Block;
+import turing.game.Nodes.Blocks.Cable.Custom.Cable_block.Cable_block;
+import turing.game.Nodes.Blocks.Cable.Custom.Cable_block.Cable_block_item;
 
 public class Cable {
-    public static final Block CABLE = Blocks.addInGroup(
-            Blocks.register(
-                    new Cable_block(BlockBehaviour.Properties.of()
-                            .pushReaction(PushReaction.BLOCK)
-                            .noOcclusion()
-                            .strength(0.5f)
-                            .sound(SoundType.GLASS)
-                    ),
-                    "cable",
-                    true
-            )
+    public static final Block CABLE = Blocks.register(
+            new Cable_block(BlockBehaviour.Properties.of()
+                    .pushReaction(PushReaction.BLOCK)
+                    .noOcclusion()
+                    .strength(0.5f)
+                    .sound(SoundType.GLASS)
+            ),
+            "cable",
+            true
     );
 
     public static final Block BUTTON_BLOCK = Blocks.addInGroup(
@@ -124,8 +124,35 @@ public class Cable {
             )
     );
 
+    public static final Block CABLE_POWER_TO_REDSTONE = Blocks.addInGroup(
+            Blocks.register(
+                    new Cable_power_to_redstone(BlockBehaviour.Properties.of()
+                            .pushReaction(PushReaction.BLOCK)
+                            .noOcclusion()
+                            .strength(0.5f)
+                            .sound(SoundType.GLASS)
+                    ),
+                    "cable_power_to_redstone",
+                    true
+            )
+    );
+
+    public static final Block REDSTONE_TO_CABLE_POWER = Blocks.addInGroup(
+            Blocks.register(
+                    new Redstone_to_cable_power(BlockBehaviour.Properties.of()
+                            .pushReaction(PushReaction.BLOCK)
+                            .noOcclusion()
+                            .strength(0.5f)
+                            .sound(SoundType.GLASS)
+                    ),
+                    "redstone_to_cable_power",
+                    true
+            )
+    );
+
     public static void initialize()
     {
         EntityBlockType.initialize();
+        Cable_block_item.Setting_Item();
     }
 }

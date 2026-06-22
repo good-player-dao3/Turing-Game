@@ -11,11 +11,13 @@
     "block.tgturing-game.test_block": "滚木方块",
 
     "block.tgturing-game.arrow_block": "箭头方块",
-    "itemTooltip.tgturing-game.arrow_block_1": "[右键]可以改变方向",
-    "itemTooltip.tgturing-game.arrow_block_2": "[红石脉冲]也可以改变方向",
-    "itemTooltip.tgturing-game.arrow_block_3": "可以被[比较器]检测当前状态",
+    "itemTooltip.tgturing-game.arrow_block_1": "§l[右键]§r可以改变方向",
+    "itemTooltip.tgturing-game.arrow_block_2": "§l红石脉冲§r也可以改变方向",
+    "itemTooltip.tgturing-game.arrow_block_3": "可以被§l比较器§r检测当前状态",
 
     "block.tgturing-game.cable": "导管",
+    "itemTooltip.tgturing-game.cable_1": "使用§l皮革§r[右键]可以§l包皮§r，固定朝向",
+    "itemTooltip.tgturing-game.cable_2": "§l扳手§r[右键]可以§l拆包皮§r或§l控制连接§r",
 
     "item.tgturing-game.get_static_stick": "状态权杖",
 
@@ -28,6 +30,9 @@
     "block.tgturing-game.or_gat": "或门",
     "block.tgturing-game.not_gat": "非门",
     "block.tgturing-game.xor_gat": "异或门",
+
+    "block.tgturing-game.cable_power_to_redstone": "输出红石器",
+    "block.tgturing-game.redstone_to_cable_power": "输入红石器",
 
     "itemGroup.tgturing-game.group": "图灵游戏"
 }

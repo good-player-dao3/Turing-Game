@@ -1,6 +1,7 @@
 package turing.game.Nodes.Blocks.Cable.Custom.Base;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.Level;
@@ -13,7 +14,7 @@ import turing.game.TGTuringGame;
 
 import java.util.Optional;
 
-public class Custom_BaseBlock extends Block {
+public abstract class Custom_BaseBlock extends Block {
 
     public Custom_BaseBlock(BlockBehaviour.Properties properties)
     {
@@ -111,6 +112,7 @@ public class Custom_BaseBlock extends Block {
         }
     }
 
+    /**NC更新时的方块状态设置*/
     protected BlockState NC_static(BlockState state, Level level, BlockPos blockPos, Block block, BlockPos blockPos2, boolean bl)
     {
         if(level.isClientSide())
@@ -127,6 +129,23 @@ public class Custom_BaseBlock extends Block {
         }
         else
             return state;
+    }
+
+    //Tools
+    public BooleanProperty directionToBP(Direction direction)
+    {
+        if(direction == Direction.UP)
+            return UP_CONNECT;
+        else if(direction == Direction.DOWN)
+            return DOWN_CONNECT;
+        else if(direction == Direction.NORTH)
+            return NORTH_CONNECT;
+        else if(direction == Direction.SOUTH)
+            return SOUTH_CONNECT;
+        else if(direction == Direction.WEST)
+            return WEST_CONNECT;
+        else
+            return EAST_CONNECT;
     }
 
     public boolean canConnectTo(BlockState neighborState, BooleanProperty To, BlockState State, BooleanProperty Me)

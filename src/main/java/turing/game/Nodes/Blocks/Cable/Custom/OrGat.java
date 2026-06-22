@@ -8,7 +8,6 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.NotNull;
 import turing.game.Nodes.Blocks.Cable.Custom.Base.Custom_gats;
-import turing.game.TGTuringGame;
 
 public class OrGat extends Custom_gats {
     public OrGat(Properties properties)

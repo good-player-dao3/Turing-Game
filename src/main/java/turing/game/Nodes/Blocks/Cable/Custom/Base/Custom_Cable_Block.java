@@ -7,7 +7,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 
-public class Custom_Cable_Block extends Custom_BaseBlock {
+public abstract class Custom_Cable_Block extends Custom_BaseBlock {
     public Custom_Cable_Block(Properties properties)
     {
         super(properties);

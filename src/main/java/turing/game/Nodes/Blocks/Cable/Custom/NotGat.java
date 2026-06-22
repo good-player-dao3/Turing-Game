@@ -3,14 +3,11 @@ package turing.game.Nodes.Blocks.Cable.Custom;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.shapes.CollisionContext;
-import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.NotNull;
 import turing.game.Nodes.Blocks.Cable.Custom.Base.Custom_gats;
-import turing.game.TGTuringGame;
 
 public class NotGat extends Custom_gats {
     public NotGat(Properties properties)

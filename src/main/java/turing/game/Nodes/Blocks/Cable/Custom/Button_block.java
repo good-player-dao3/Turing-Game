@@ -30,19 +30,9 @@ public class Button_block extends Custom_Cable_Block {
     protected BlockState Start_State_More(BlockState state, BlockPlaceContext blockPlaceContext)
     {
         Direction direction = state.getValue(FACING);
-        state = state.setValue(CABLE_POWER,true);
-        if(direction == Direction.UP)
-            return state.setValue(UP_CONNECT,true);
-        else if(direction == Direction.DOWN)
-            return state.setValue(DOWN_CONNECT,true);
-        else if(direction == Direction.NORTH)
-            return state.setValue(NORTH_CONNECT,true);
-        else if(direction == Direction.SOUTH)
-            return state.setValue(SOUTH_CONNECT,true);
-        else if(direction == Direction.WEST)
-            return state.setValue(WEST_CONNECT,true);
-        else
-            return state.setValue(EAST_CONNECT,true);
+        return state
+                .setValue(directionToBP(direction),true)
+                .setValue(CABLE_POWER,true);
     }
 
     @Override
@@ -56,13 +46,11 @@ public class Button_block extends Custom_Cable_Block {
     @Override
     protected BlockState NC_static(BlockState state, Level level, BlockPos blockPos, Block block, BlockPos blockPos2, boolean bl)
     {
-        TGTuringGame.LOGGER.info("Try to update this");
         if(!level.isClientSide())
         {
             BlockState state2 = level.getBlockState(blockPos2);
             if(getConnect(blockPos,blockPos2,state,state2) && state.getValue(CABLE_POWER) && !state2.getValue(CABLE_POWER))
             {
-                TGTuringGame.LOGGER.info("Update!");
                 level.setBlockAndUpdate(blockPos2,state2.setValue(CABLE_POWER,true));
             }
         }

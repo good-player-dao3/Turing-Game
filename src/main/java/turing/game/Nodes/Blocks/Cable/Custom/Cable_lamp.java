@@ -1,14 +1,9 @@
 package turing.game.Nodes.Blocks.Cable.Custom;
 
-import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.context.BlockPlaceContext;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import turing.game.Nodes.Blocks.Cable.Custom.Base.Custom_Cable_Block;
-
-import java.util.Optional;
 
 public class Cable_lamp extends Custom_Cable_Block {
     public Cable_lamp(Properties properties)
