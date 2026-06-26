@@ -10,7 +10,6 @@ import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.NotNull;
 import turing.game.Nodes.Blocks.Cable.Custom.Base.Custom_Cable_Block;
-import turing.game.TGTuringGame;
 
 public class Cable_power_to_redstone extends Custom_Cable_Block {
     public Cable_power_to_redstone(Properties properties)

@@ -36,5 +36,7 @@
     
     "block.tgturing-game.rom": "ROM",
 
+    "block.tgturing-game.print": "打印机",
+
     "itemGroup.tgturing-game.group": "图灵游戏"
 }
