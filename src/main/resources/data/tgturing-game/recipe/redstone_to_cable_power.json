@@ -1,0 +1,25 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "T C",
+        " . ",
+        " # "
+    ],
+    "key": {
+        "#": {
+            "item": "tgturing-game:cable"
+        },
+        ".": {
+            "item": "minecraft:redstone"
+        },
+        "T": {
+            "item": "tgturing-game:test_block"
+        },
+        "C": {
+            "item": "minecraft:comparator"
+        }
+    },
+    "result": {
+        "id": "tgturing-game:redstone_to_cable_power"
+    }
+}

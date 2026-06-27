@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "facing=north": {"model": "tgturing-game:block/cable_power_to_redstone/redstone_to_cable_power","y": 180},
+        "facing=south": {"model": "tgturing-game:block/cable_power_to_redstone/redstone_to_cable_power"},
+        "facing=east": {"model": "tgturing-game:block/cable_power_to_redstone/redstone_to_cable_power","y": 270},
+        "facing=west": {"model": "tgturing-game:block/cable_power_to_redstone/redstone_to_cable_power","y": 90},
+        "facing=up": {"model": "tgturing-game:block/cable_power_to_redstone/redstone_to_cable_power","x": 90},
+        "facing=down": {"model": "tgturing-game:block/cable_power_to_redstone/redstone_to_cable_power","x": -90}
+    }
+}

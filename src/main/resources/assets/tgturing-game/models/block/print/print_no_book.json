@@ -1,0 +1,12 @@
+{
+    "parent": "block/cube",
+    "textures": {
+        "north": "tgturing-game:block/work_block/cable_input",
+        "south": "tgturing-game:block/work_block/cable_clk",
+        "down": "tgturing-game:block/cable_block_side",
+        "up": "tgturing-game:block/print/print_no_book",
+        "west": "tgturing-game:block/work_block/cable_error",
+        "east": "tgturing-game:block/cable_block_side",
+        "particle": "tgturing-game:block/cable_block_side"
+    }
+}

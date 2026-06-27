@@ -1,0 +1,14 @@
+{
+    "replace": false,
+    "values": [
+        "tgturing-game:gat",
+        "tgturing-game:not_gat",
+        "tgturing-game:and_gat",
+        "tgturing-game:or_gat",
+        "tgturing-game:xor_gat",
+        "tgturing-game:print",
+        "tgturing-game:rom",
+        "tgturing-game:t_stored",
+        "tgturing-game:bit_stored"
+    ]
+}

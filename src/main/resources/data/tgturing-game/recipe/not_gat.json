@@ -1,0 +1,14 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "minecraft:redstone_torch"
+        },
+        {
+            "item": "tgturing-game:gat"
+        }
+    ],
+    "result": {
+        "id": "tgturing-game:not_gat"
+    }
+}

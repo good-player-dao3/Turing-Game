@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#S#",
+        "#F#",
+        "CTC"
+    ],
+    "key": {
+        "#": {
+            "item": "tgturing-game:test_item"
+        },
+        "S": {
+            "item": "minecraft:spyglass"
+        },
+        "F": {
+            "item": "minecraft:flint"
+        },
+        "C": {
+            "item": "tgturing-game:cable"
+        },
+        "T": {
+            "item": "tgturing-game:test_block"
+        }
+    },
+    "result": {
+        "id": "tgturing-game:rom"
+    }
+}

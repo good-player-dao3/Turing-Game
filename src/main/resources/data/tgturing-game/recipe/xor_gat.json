@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " A ",
+        " N ",
+        "O A"
+    ],
+    "key": {
+        "A": {
+            "item": "tgturing-game:and_gat"
+        },
+        "N": {
+            "item": "tgturing-game:not_gat"
+        },
+        "O": {
+            "item": "tgturing-game:or_gat"
+        }
+    },
+    "result": {
+        "id": "tgturing-game:xor_gat"
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "item.tgturing-game.test_item":"Test Item",
+    "itemTooltip.tgturing-game.test_item_1":"One thing,and more?",
+
+    "item.tgturing-game.test_food": "Test Food",
+    "itemTooltip.tgturing-game.test_food_1":"Why???",
+
+    "item.tgturing-game.wrench": "Wrench",
+
+    "block.tgturing-game.test_block": "Test Block",
+
+    "itemGroup.tgturing-game.group": "Turing Game"
+}

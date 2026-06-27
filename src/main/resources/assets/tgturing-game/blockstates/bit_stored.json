@@ -1,0 +1,11 @@
+{
+    "variants": {
+        "facing=north": {"model": "tgturing-game:block/stored/bit_stored"},
+        "facing=south": {"model": "tgturing-game:block/stored/bit_stored","y": 180},
+        "facing=east": {"model": "tgturing-game:block/stored/bit_stored","y": 90},
+        "facing=west": {"model": "tgturing-game:block/stored/bit_stored","y": 270},
+
+        "facing=up": {"model": "tgturing-game:block/stored/bit_stored","y": 270},
+        "facing=down": {"model": "tgturing-game:block/stored/bit_stored","y": 270}
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " = ",
+        " X ",
+        " = "
+    ],
+    "key": {
+        "=": {
+            "item": "tgturing-game:cable"
+        },
+        "X": {
+            "item": "tgturing-game:test_block"
+        }
+    },
+    "result": {
+        "id": "tgturing-game:gat"
+    }
+}

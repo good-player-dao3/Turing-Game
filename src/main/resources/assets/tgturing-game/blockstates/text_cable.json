@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "facing=north": {"model": "tgturing-game:block/text_cable","y": 180},
+        "facing=south": {"model": "tgturing-game:block/text_cable"},
+        "facing=east": {"model": "tgturing-game:block/text_cable","y": 270},
+        "facing=west": {"model": "tgturing-game:block/text_cable","y": 90},
+        "facing=up": {"model": "tgturing-game:block/text_cable","x": 90},
+        "facing=down": {"model": "tgturing-game:block/text_cable","x": -90}
+    }
+}

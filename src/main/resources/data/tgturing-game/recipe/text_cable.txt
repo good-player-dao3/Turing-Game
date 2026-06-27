@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " T ",
+        " X ",
+        " = "
+    ],
+    "key": {
+        "T": {
+            "tag": "minecraft:signs"
+        },
+        "=": {
+            "item": "tgturing-game:cable"
+        },
+        "X": {
+            "item": "tgturing-game:test_block"
+        }
+    },
+    "result": {
+        "id": "tgturing-game:text_cable"
+    }
+}

@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "tgturing-game",
+	"version": "${version}",
+	"name": "[TG]Turing Game",
+	"description": "这是一个计算机mod（？）\n怎么玩？点击“源码”或“网站”查看相关内容",
+	"authors": [
+		"一个疯子"
+	],
+	"contact": {
+		"homepage": "https://www.bilibili.com/video/BV1GJ411x7h7/",
+		"sources": "https://github.com/good-player-dao3/Turing-Game/"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/tgturing-game/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"turing.game.TGTuringGame"
+		],
+		"client": [
+			"turing.game.client.TGTuringGameClient"
+		],
+		"fabric-datagen": [
+			"turing.game.client.TGTuringGameDataGenerator"
+		]
+	},
+	"mixins": [
+		"tgturing-game.mixins.json",
+		{
+			"config": "tgturing-game.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.2",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}

@@ -1,0 +1,46 @@
+{
+    "item.tgturing-game.test_item": "滚木",
+    "itemTooltip.tgturing-game.test_item_1": "万恶之源——滚木",
+
+    "item.tgturing-game.test_food": "大饼",
+    "itemTooltip.tgturing-game.test_food_1": "何意为？",
+
+    "item.tgturing-game.wrench": "扳手",
+    "itemTooltip.tgturing-game.wrench_1": "[Shift+右键]可以拆卸方块",
+
+    "block.tgturing-game.test_block": "滚木方块",
+
+    "block.tgturing-game.arrow_block": "箭头方块",
+    "itemTooltip.tgturing-game.arrow_block_1": "§l[右键]§r可以改变方向",
+    "itemTooltip.tgturing-game.arrow_block_2": "§l红石脉冲§r也可以改变方向",
+    "itemTooltip.tgturing-game.arrow_block_3": "可以被§l比较器§r检测当前状态",
+
+    "block.tgturing-game.cable": "导管",
+    "itemTooltip.tgturing-game.cable_1": "使用§l皮革§r[右键]可以§l包皮§r，固定朝向",
+    "itemTooltip.tgturing-game.cable_2": "§l扳手§r[右键]可以§l拆包皮§r或§l控制连接§r",
+
+    "item.tgturing-game.get_static_stick": "状态权杖",
+
+    "block.tgturing-game.button_block": "按钮",
+
+    "block.tgturing-game.cable_lamp": "灯",
+
+    "block.tgturing-game.gat": "缓冲器",
+    "block.tgturing-game.and_gat": "与门",
+    "block.tgturing-game.or_gat": "或门",
+    "block.tgturing-game.not_gat": "非门",
+    "block.tgturing-game.xor_gat": "异或门",
+
+    "block.tgturing-game.cable_power_to_redstone": "输出红石器",
+    "block.tgturing-game.redstone_to_cable_power": "输入红石器",
+    
+    "block.tgturing-game.rom": "ROM",
+
+    "block.tgturing-game.print": "打印机",
+
+    "block.tgturing-game.t_stored": "T型触发器",
+
+    "block.tgturing-game.bit_stored": "锁存器",
+
+    "itemGroup.tgturing-game.group": "图灵游戏"
+}
