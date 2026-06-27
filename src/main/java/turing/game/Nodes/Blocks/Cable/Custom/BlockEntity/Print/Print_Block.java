@@ -47,7 +47,7 @@ public class Print_Block extends Custom_gats implements EntityBlock
             return InteractionResult.PASS;
         ItemStack stack = player.getItemInHand(InteractionHand.MAIN_HAND);
 
-        TGTuringGame.LOGGER.info("\nItem: "+stack.getItem()+"\nWith: "+Items.WRITABLE_BOOK);
+        //TGTuringGame.LOGGER.info("\nItem: "+stack.getItem()+"\nWith: "+Items.WRITABLE_BOOK);
 
         if(state.getValue(BOOK))
         {
@@ -80,7 +80,7 @@ public class Print_Block extends Custom_gats implements EntityBlock
             {
                 List<Filterable<String>> pages = writableBookContent.pages();
                 entity.emptyChars = (100-pages.size())*14*8;
-                TGTuringGame.LOGGER.info("EmptyRows: "+entity.emptyChars/8);
+                //TGTuringGame.LOGGER.info("EmptyRows: "+entity.emptyChars/8);
             }
             //Del
             player.setItemInHand(InteractionHand.MAIN_HAND,ItemStack.EMPTY);

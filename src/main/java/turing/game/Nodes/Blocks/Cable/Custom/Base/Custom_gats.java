@@ -34,7 +34,7 @@ public abstract class Custom_gats extends Custom_Cable_Block {
     {
         if(level.isClientSide())
             return state;
-        TGTuringGame.LOGGER.info("Update for "+blockPos2);
+        //TGTuringGame.LOGGER.info("Update for "+blockPos2);
 
         Direction directions_output = getOutput(state.getValue(FACING));
         BlockPos outPos = Tools.PosAddDirection(blockPos,directions_output);
@@ -44,16 +44,16 @@ public abstract class Custom_gats extends Custom_Cable_Block {
             BlockState state2 = level.getBlockState(blockPos2);
             if(getConnect(blockPos,blockPos2,state,state2) && state.getValue(CABLE_POWER) && !state2.getValue(CABLE_POWER))
             {
-                TGTuringGame.LOGGER.info("NC Update Output "+ state2.getValue(CABLE_POWER)+" -> "+Outputs);
+                //TGTuringGame.LOGGER.info("NC Update Output "+ state2.getValue(CABLE_POWER)+" -> "+Outputs);
                 if(!state2.is(IS_GAT_KEY))
                     level.setBlockAndUpdate(blockPos2,state2.setValue(CABLE_POWER,Outputs));
-                else
-                    TGTuringGame.LOGGER.info("Is Gat");
+//                else
+//                    TGTuringGame.LOGGER.info("Is Gat");
             }
         }
         else
         {
-            TGTuringGame.LOGGER.info("Start Run This!");
+            //TGTuringGame.LOGGER.info("Start Run This!");
             level.scheduleTick(blockPos, this, WaitTick());
         }
         return state;
@@ -94,7 +94,7 @@ public abstract class Custom_gats extends Custom_Cable_Block {
             );
             BlockState newState = level.getBlockState(newPos);
             Inputs[i] = getConnect(blockPos,newPos,state,newState) && newState.getValue(CABLE_POWER);
-            TGTuringGame.LOGGER.info("Input Pos "+newPos+":"+Inputs[i]);
+            //TGTuringGame.LOGGER.info("Input Pos "+newPos+":"+Inputs[i]);
         }
         //计算输出
         boolean Outputs = Gat_Load(Inputs,state,level,blockPos);
@@ -106,20 +106,18 @@ public abstract class Custom_gats extends Custom_Cable_Block {
                 directions_output.getStepY()+blockPos.getY(),
                 directions_output.getStepZ()+blockPos.getZ()
         );
-        TGTuringGame.LOGGER.info("Output Pos "+newPos);
+        //TGTuringGame.LOGGER.info("Output Pos "+newPos);
         BlockState newState = level.getBlockState(newPos);
         if(getConnect(blockPos,newPos,state,newState) && Outputs != newState.getValue(CABLE_POWER))
         {
-            TGTuringGame.LOGGER.info("Update Output "+newState.getValue(CABLE_POWER)+" -> "+Outputs);
+            //TGTuringGame.LOGGER.info("Update Output "+newState.getValue(CABLE_POWER)+" -> "+Outputs);
             if(!newState.is(IS_GAT_KEY))
             {
                 level.setBlockAndUpdate(newPos,newState.setValue(CABLE_POWER,Outputs));
             }
-            else
-                TGTuringGame.LOGGER.info("Is Gat");
         }
 
-        TGTuringGame.LOGGER.info("Main Load to "+ Arrays.toString(Inputs) +"->"+ Outputs+"\n");
+        //TGTuringGame.LOGGER.info("Main Load to "+ Arrays.toString(Inputs) +"->"+ Outputs+"\n");
     }
     /**计算结果*/
     protected boolean Gat_Load(boolean[] Inputs,BlockState state,Level level,BlockPos blockPos)
@@ -141,7 +139,7 @@ public abstract class Custom_gats extends Custom_Cable_Block {
     @Override
     protected void tick(BlockState blockState, ServerLevel level, BlockPos blockPos, RandomSource randomSource)
     {
-        TGTuringGame.LOGGER.info("---Wait Run Main!\n");
+        //TGTuringGame.LOGGER.info("---Wait Run Main!\n");
         Main(blockState,level,blockPos);
     }
     //工具

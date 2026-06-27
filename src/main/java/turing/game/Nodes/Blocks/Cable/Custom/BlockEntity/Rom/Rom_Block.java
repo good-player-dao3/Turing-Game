@@ -41,7 +41,7 @@ public class Rom_Block extends Custom_gats implements EntityBlock
             return InteractionResult.PASS;
         ItemStack stack = player.getItemInHand(InteractionHand.MAIN_HAND);
 
-        TGTuringGame.LOGGER.info("\nItem: "+stack.getItem()+"\nWith: "+Items.WRITABLE_BOOK);
+        //TGTuringGame.LOGGER.info("\nItem: "+stack.getItem()+"\nWith: "+Items.WRITABLE_BOOK);
 
         if(state.getValue(BOOK))
         {
@@ -139,7 +139,7 @@ public class Rom_Block extends Custom_gats implements EntityBlock
             //Read
             if(entity.readPoint >= entity.out.length())
                 entity.readPoint = 0;
-            TGTuringGame.LOGGER.info(entity.out+" With: "+entity.readPoint);
+            //TGTuringGame.LOGGER.info(entity.out+" With: "+entity.readPoint);
             return entity.out.charAt(entity.readPoint++) == '1';
         }
         else
