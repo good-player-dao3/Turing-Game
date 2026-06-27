@@ -220,9 +220,9 @@ public class Print_Block extends Custom_gats implements EntityBlock
     }
 
     @Override
-    protected BlockState Start_State_More(BlockState state,BlockPlaceContext blockPlaceContext)
+    protected void init()
     {
-        return super.Start_State_More(state,blockPlaceContext).setValue(BOOK,false);
+        registerDefaultState(defaultBlockState().setValue(BOOK,false));
     }
 
     //BlockEntity

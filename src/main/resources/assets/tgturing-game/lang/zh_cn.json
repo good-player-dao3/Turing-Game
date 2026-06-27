@@ -38,5 +38,9 @@
 
     "block.tgturing-game.print": "打印机",
 
+    "block.tgturing-game.t_stored": "T型触发器",
+
+    "block.tgturing-game.bit_stored": "锁存器",
+
     "itemGroup.tgturing-game.group": "图灵游戏"
 }

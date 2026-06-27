@@ -23,7 +23,8 @@ public abstract class Custom_gats extends Custom_Cable_Block {
         Settings();
     }
 
-    private void init()
+    /**设置常量*/
+    protected void init()
     {
     }
 
@@ -68,27 +69,10 @@ public abstract class Custom_gats extends Custom_Cable_Block {
     protected BlockState Start_State_More(BlockState state, BlockPlaceContext blockPlaceContext)
     {
         Direction facing = state.getValue(FACING);
-
-        Direction vo = getOutput(facing);
-        if(vo == Direction.NORTH)
-            state = state.setValue(NORTH_CONNECT,true);
-        else if(vo == Direction.SOUTH)
-            state = state.setValue(SOUTH_CONNECT,true);
-        else if(vo == Direction.EAST)
-            state = state.setValue(EAST_CONNECT,true);
-        else if(vo == Direction.WEST)
-            state = state.setValue(WEST_CONNECT,true);
-
+        state = state.setValue(directionToBP(getOutput(facing)),true);
         for(Direction v:getInput(facing))
         {
-            if(v == Direction.NORTH)
-                state = state.setValue(NORTH_CONNECT,true);
-            else if(v == Direction.SOUTH)
-                state = state.setValue(SOUTH_CONNECT,true);
-            else if(v == Direction.EAST)
-                state = state.setValue(EAST_CONNECT,true);
-            else if(v == Direction.WEST)
-                state = state.setValue(WEST_CONNECT,true);
+            state = state.setValue(directionToBP(v),true);
         }
         return state;
     }
@@ -114,7 +98,7 @@ public abstract class Custom_gats extends Custom_Cable_Block {
         }
         //计算输出
         boolean Outputs = Gat_Load(Inputs,state,level,blockPos);
-        level.setBlockAndUpdate(blockPos,state.setValue(CABLE_POWER,Outputs));
+        level.setBlockAndUpdate(blockPos,State_Load(Outputs,Inputs,state.setValue(CABLE_POWER,Outputs),level,blockPos));
         //设置输出
         Direction directions_output = getOutput(state.getValue(FACING));
         BlockPos newPos = new BlockPos(
@@ -141,6 +125,11 @@ public abstract class Custom_gats extends Custom_Cable_Block {
     protected boolean Gat_Load(boolean[] Inputs,BlockState state,Level level,BlockPos blockPos)
     {
         return false;
+    }
+
+    protected BlockState State_Load(boolean Outputs,boolean[] Inputs,BlockState state,Level level,BlockPos blockPos)
+    {
+        return state;
     }
 
     //计划刻
@@ -183,6 +172,11 @@ public abstract class Custom_gats extends Custom_Cable_Block {
     /**顺时钟旋转面*/
     private Direction numberToDirection(int num,Direction direction)
     {
+        if(num == -1)
+            return Direction.UP;
+        else if(num == -2)
+            return Direction.DOWN;
+
         for(int i = 0;i < num;i++)
             direction = direction.getClockWise();
         return direction;
