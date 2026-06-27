@@ -129,8 +129,8 @@ public class Rom_Block extends Custom_gats implements EntityBlock
         )
         {
             //CLK
-            if(Inputs[0] == true && entity.oldInput == false)
-                entity.oldInput = Inputs[0];
+            if(Inputs[0] && !entity.oldInput)
+                entity.oldInput = true;
             else
             {
                 entity.oldInput = Inputs[0];
@@ -157,9 +157,9 @@ public class Rom_Block extends Custom_gats implements EntityBlock
     }
 
     @Override
-    protected BlockState Start_State_More(BlockState state, BlockPlaceContext blockPlaceContext)
+    protected void init()
     {
-        return super.Start_State_More(state,blockPlaceContext).setValue(BOOK,false);
+        registerDefaultState(defaultBlockState().setValue(BOOK,false));
     }
 
     //BlockEntity

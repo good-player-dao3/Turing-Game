@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#F#",
+        "#B#",
+        "CTC"
+    ],
+    "key": {
+        "#": {
+            "item": "tgturing-game:test_item"
+        },
+        "F": {
+            "item": "minecraft:feather"
+        },
+        "B": {
+            "item": "minecraft:black_dye"
+        },
+        "C": {
+            "item": "tgturing-game:cable"
+        },
+        "T": {
+            "item": "tgturing-game:test_block"
+        }
+    },
+    "result": {
+        "id": "tgturing-game:print"
+    }
+}

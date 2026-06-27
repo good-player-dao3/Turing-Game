@@ -7,11 +7,13 @@ import net.minecraft.world.level.material.PushReaction;
 import turing.game.Nodes.Blocks.Blocks;
 import turing.game.Nodes.Blocks.Cable.Custom.*;
 import turing.game.Nodes.Blocks.Cable.Custom.BlockEntity.EntityBlockType;
-import turing.game.Nodes.Blocks.Cable.Custom.BlockEntity.Rom.Rom_Block;
 import turing.game.Nodes.Blocks.Cable.Custom.BlockEntity.Print.Print_Block;
+import turing.game.Nodes.Blocks.Cable.Custom.BlockEntity.Rom.Rom_Block;
 import turing.game.Nodes.Blocks.Cable.Custom.BlockEntity.Text_Cable.Text_Cable_Block;
 import turing.game.Nodes.Blocks.Cable.Custom.Cable_block.Cable_block;
 import turing.game.Nodes.Blocks.Cable.Custom.Cable_block.Cable_block_item;
+import turing.game.Nodes.Blocks.Cable.Custom.Stored.Bit_Stored;
+import turing.game.Nodes.Blocks.Cable.Custom.Stored.T_Stored;
 
 public class Cable {
     public static final Block CABLE = Blocks.register(
@@ -172,6 +174,30 @@ public class Cable {
                             .sound(SoundType.GLASS)
                     ),
                     "redstone_to_cable_power",
+                    true
+            )
+    );
+
+    public static final Block T_STORED = Blocks.addInGroup(
+            Blocks.register(
+                    new T_Stored(BlockBehaviour.Properties.of()
+                            .pushReaction(PushReaction.BLOCK)
+                            .strength(0.5f)
+                            .sound(SoundType.GLASS)
+                    ),
+                    "t_stored",
+                    true
+            )
+    );
+
+    public static final Block BIT_STORED = Blocks.addInGroup(
+            Blocks.register(
+                    new Bit_Stored(BlockBehaviour.Properties.of()
+                            .pushReaction(PushReaction.BLOCK)
+                            .strength(0.5f)
+                            .sound(SoundType.GLASS)
+                    ),
+                    "bit_stored",
                     true
             )
     );

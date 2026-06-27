@@ -1,9 +1,23 @@
 # [TG]Turing Game
 
-## Setup
+## 这是一个提供逻辑门的mod
 
-For setup instructions, please see the [Fabric Documentation page](https://docs.fabricmc.net/develop/getting-started/creating-a-project#setting-up) related to the IDE that you are using.
+额，还有什么可以说的呢？  
+让人沉思……
 
-## License
+## 功能
 
-This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
+我们提供了什么？
+1. 逻辑门
+2. 管道信号
+3. 滚木
+
+## 运行环境
+
+1.21 fabric
+
+## 链接
+- [仓库](https://github.com/good-player-dao3/Turing-Game/)
+- [教程 - 入门](https://www.bilibili.com/video/BV1GJ411x7h7/)
+- [教程 - 样例1](https://www.bilibili.com/video/BV1GJ411x7h7/)
+- [教程 - 样例2](https://www.bilibili.com/video/BV1GJ411x7h7/)

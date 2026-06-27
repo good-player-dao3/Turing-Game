@@ -125,8 +125,8 @@ public abstract class Custom_BaseBlock extends Block {
             return state;
     }
 
-    //Tools
-    public BooleanProperty directionToBP(Direction direction)
+    /**方向兑换器*/
+    public static BooleanProperty directionToBP(Direction direction)
     {
         if(direction == Direction.UP)
             return UP_CONNECT;
@@ -142,14 +142,14 @@ public abstract class Custom_BaseBlock extends Block {
             return EAST_CONNECT;
     }
 
-    public boolean canConnectTo(BlockState neighborState, BooleanProperty To, BlockState State, BooleanProperty Me)
+    public static boolean canConnectTo(BlockState neighborState, BooleanProperty To, BlockState State, BooleanProperty Me)
     {
         Optional<Boolean> value_to = neighborState.getOptionalValue(To);
         Optional<Boolean> value_me = State.getOptionalValue(Me);
         return value_to.isPresent() && value_to.get() && value_me.isPresent() && value_me.get();
     }
 
-    public boolean getConnect(BlockPos blockPos, BlockPos blockPos2, BlockState state, BlockState state2)
+    public static boolean getConnect(BlockPos blockPos, BlockPos blockPos2, BlockState state, BlockState state2)
     {
         BlockPos subPos = blockPos2.subtract(blockPos);
         boolean flag = false;

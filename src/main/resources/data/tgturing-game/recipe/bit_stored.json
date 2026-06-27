@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#/#",
+        " C ",
+        " # "
+    ],
+    "key": {
+        "#": {
+            "item": "tgturing-game:cable"
+        },
+        "/": {
+            "item": "tgturing-game:arrow_block"
+        },
+        "C": {
+            "item": "minecraft:comparator"
+        }
+    },
+    "result": {
+        "id": "tgturing-game:bit_stored"
+    }
+}
