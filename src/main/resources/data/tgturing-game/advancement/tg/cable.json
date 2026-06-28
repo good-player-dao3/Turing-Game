@@ -1,0 +1,32 @@
+{
+    "criteria": {
+        "c": {
+            "conditions": {
+                "items": [
+                    {
+                        "items": "tgturing-game:cable"
+                    }
+                ]
+            },
+            "trigger": "minecraft:inventory_changed"
+        }
+    },
+    "display": {
+        "description": {
+            "translate": "advancements.tg.description_cable"
+        },
+        "icon": {
+            "count": 1,
+            "id": "tgturing-game:cable"
+        },
+        "title": {
+            "translate": "advancements.tg.title_cable"
+        }
+    },
+    "parent": "tgturing-game:tg/root",
+    "requirements": [
+        [
+            "c"
+        ]
+    ]
+}

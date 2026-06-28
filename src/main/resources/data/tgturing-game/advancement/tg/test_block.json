@@ -1,0 +1,32 @@
+{
+    "criteria": {
+        "c": {
+            "conditions": {
+                "items": [
+                    {
+                        "items": "tgturing-game:test_block"
+                    }
+                ]
+            },
+            "trigger": "minecraft:inventory_changed"
+        }
+    },
+    "display": {
+        "description": {
+            "translate": "advancements.tg.description_test_block"
+        },
+        "icon": {
+            "count": 1,
+            "id": "tgturing-game:test_block"
+        },
+        "title": {
+            "translate": "advancements.tg.title_test_block"
+        }
+    },
+    "parent": "tgturing-game:tg/root",
+    "requirements": [
+        [
+            "c"
+        ]
+    ]
+}

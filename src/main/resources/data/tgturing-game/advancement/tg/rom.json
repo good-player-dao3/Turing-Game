@@ -1,0 +1,32 @@
+{
+    "criteria": {
+        "c": {
+            "conditions": {
+                "items": [
+                    {
+                        "items": "tgturing-game:rom"
+                    }
+                ]
+            },
+            "trigger": "minecraft:inventory_changed"
+        }
+    },
+    "display": {
+        "description": {
+            "translate": "advancements.tg.description_rom"
+        },
+        "icon": {
+            "count": 1,
+            "id": "tgturing-game:rom"
+        },
+        "title": {
+            "translate": "advancements.tg.title_rom"
+        }
+    },
+    "parent": "tgturing-game:tg/test_block",
+    "requirements": [
+        [
+            "c"
+        ]
+    ]
+}

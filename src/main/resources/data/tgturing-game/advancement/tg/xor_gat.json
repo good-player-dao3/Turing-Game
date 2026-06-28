@@ -1,0 +1,32 @@
+{
+    "criteria": {
+        "c": {
+            "conditions": {
+                "items": [
+                    {
+                        "items": "tgturing-game:xor_gat"
+                    }
+                ]
+            },
+            "trigger": "minecraft:inventory_changed"
+        }
+    },
+    "display": {
+        "description": {
+            "translate": "advancements.tg.description_xor_gat"
+        },
+        "icon": {
+            "count": 1,
+            "id": "tgturing-game:xor_gat"
+        },
+        "title": {
+            "translate": "advancements.tg.title_xor_gat"
+        }
+    },
+    "parent": "tgturing-game:tg/gat",
+    "requirements": [
+        [
+            "c"
+        ]
+    ]
+}

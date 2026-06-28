@@ -1,0 +1,32 @@
+{
+    "criteria": {
+        "test_item": {
+            "conditions": {
+                "items": [
+                    {
+                        "items": "tgturing-game:test_item"
+                    }
+                ]
+            },
+            "trigger": "minecraft:inventory_changed"
+        }
+    },
+    "display": {
+        "description": {
+            "translate": "advancements.tg.description_test_item"
+        },
+        "icon": {
+            "count": 1,
+            "id": "tgturing-game:test_item"
+        },
+        "title": {
+            "translate": "advancements.tg.title_test_item"
+        },
+        "background": "minecraft:textures/block/bamboo_block.png"
+    },
+    "requirements": [
+        [
+            "test_item"
+        ]
+    ]
+}

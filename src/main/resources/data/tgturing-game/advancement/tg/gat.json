@@ -1,0 +1,32 @@
+{
+    "criteria": {
+        "c": {
+            "conditions": {
+                "items": [
+                    {
+                        "items": "tgturing-game:gat"
+                    }
+                ]
+            },
+            "trigger": "minecraft:inventory_changed"
+        }
+    },
+    "display": {
+        "description": {
+            "translate": "advancements.tg.description_gat"
+        },
+        "icon": {
+            "count": 1,
+            "id": "tgturing-game:gat"
+        },
+        "title": {
+            "translate": "advancements.tg.title_gat"
+        }
+    },
+    "parent": "tgturing-game:tg/cable",
+    "requirements": [
+        [
+            "c"
+        ]
+    ]
+}

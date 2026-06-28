@@ -1,0 +1,34 @@
+{
+    "criteria": {
+        "c": {
+            "conditions": {
+                "items": [
+                    {
+                        "items": "tgturing-game:test_food"
+                    }
+                ]
+            },
+            "trigger": "minecraft:inventory_changed"
+        }
+    },
+    "display": {
+        "description": {
+            "translate": "advancements.tg.description_test_food"
+        },
+        "icon": {
+            "count": 1,
+            "id": "tgturing-game:test_food"
+        },
+        "title": {
+            "translate": "advancements.tg.title_test_food"
+        },
+        "frame": "challenge",
+        "hidden": true
+    },
+    "parent": "tgturing-game:tg/root",
+    "requirements": [
+        [
+            "c"
+        ]
+    ]
+}

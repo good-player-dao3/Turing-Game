@@ -35,12 +35,37 @@
     "block.tgturing-game.redstone_to_cable_power": "输入红石器",
     
     "block.tgturing-game.rom": "ROM",
-
     "block.tgturing-game.print": "打印机",
-
     "block.tgturing-game.t_stored": "T型触发器",
-
     "block.tgturing-game.bit_stored": "锁存器",
+
+    "advancements.tg.title_test_item": "图灵游戏§m（滚木科技）§r",
+    "advancements.tg.description_test_item": "滚木科技，启动！",
+    "advancements.tg.title_test_food": "何意为？",
+    "advancements.tg.description_test_food": "这是什么，我的屏幕怎么什么都没有显示？",
+    "advancements.tg.title_test_block": "滚木方块",
+    "advancements.tg.description_test_block": "不错的辅助方块？",
+    "advancements.tg.title_arrow_block": "箭头方块",
+    "advancements.tg.description_arrow_block": "这还要什么陶瓦！",
+    "advancements.tg.title_cable": "导管",
+    "advancements.tg.description_cable": "玩电路一定要节制！",
+    "advancements.tg.title_print": "打印机（脉冲打印）",
+    "advancements.tg.description_print": "可以打印0或1的打印机",
+    "advancements.tg.title_rom": "ROM（脉冲读取）",
+    "advancements.tg.description_rom": "不错的读书机§m即使只能读0或1§r",
+    "advancements.tg.title_wrench": "扳手",
+    "advancements.tg.description_wrench": "狂拆！狂拆！",
+
+    "advancements.tg.title_gat": "缓冲器",
+    "advancements.tg.description_gat": "延迟1gt的小玩具",
+    "advancements.tg.title_not_gat": "非门",
+    "advancements.tg.description_not_gat": "0 -> 1\n1 -> 0",
+    "advancements.tg.title_or_gat": "或门",
+    "advancements.tg.description_or_gat": "0,0 -> 0\n1,0 -> 1\n1,1 -> 1",
+    "advancements.tg.title_and_gat": "与门",
+    "advancements.tg.description_and_gat": "0,0 -> 0\n1,0 -> 0\n1,1 -> 1",
+    "advancements.tg.title_xor_gat": "异或门",
+    "advancements.tg.description_xor_gat": "0,0 -> 0\n1,0 -> 1\n1,1 -> 0",
 
     "itemGroup.tgturing-game.group": "图灵游戏"
 }

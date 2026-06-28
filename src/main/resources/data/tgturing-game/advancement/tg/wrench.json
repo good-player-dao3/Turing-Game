@@ -1,0 +1,32 @@
+{
+    "criteria": {
+        "c": {
+            "conditions": {
+                "items": [
+                    {
+                        "items": "tgturing-game:wrench"
+                    }
+                ]
+            },
+            "trigger": "minecraft:inventory_changed"
+        }
+    },
+    "display": {
+        "description": {
+            "translate": "advancements.tg.description_wrench"
+        },
+        "icon": {
+            "count": 1,
+            "id": "tgturing-game:wrench"
+        },
+        "title": {
+            "translate": "advancements.tg.title_wrench"
+        }
+    },
+    "parent": "tgturing-game:tg/root",
+    "requirements": [
+        [
+            "c"
+        ]
+    ]
+}
