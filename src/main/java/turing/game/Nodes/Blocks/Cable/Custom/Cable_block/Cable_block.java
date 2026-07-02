@@ -3,6 +3,7 @@ package turing.game.Nodes.Blocks.Cable.Custom.Cable_block;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.DyeItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
@@ -11,14 +12,14 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.CollisionContext;
-import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraft.world.phys.shapes.Shapes;
+import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.NotNull;
 import turing.game.Nodes.Blocks.Cable.Custom.Base.Custom_BaseBlock;
-
 import turing.game.Nodes.Items.Items;
 import turing.game.Tools.Tools;
 
@@ -39,6 +40,7 @@ public class Cable_block extends Custom_BaseBlock {
                 .setValue(UP_CONNECT,true)
                 .setValue(DOWN_CONNECT,true)
                 .setValue(IS_BOX,false)
+                .setValue(COLOR,0)
         );
 
         for(int i = 0;i < 64;i++)
@@ -61,11 +63,12 @@ public class Cable_block extends Custom_BaseBlock {
     }
 
     public static final BooleanProperty IS_BOX = BooleanProperty.create("is_box");
+    public static final IntegerProperty COLOR = IntegerProperty.create("color",0,16);
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder)
     {
         super.createBlockStateDefinition(builder);
-        builder.add(IS_BOX);
+        builder.add(IS_BOX,COLOR);
     }
 
 
@@ -112,6 +115,10 @@ public class Cable_block extends Custom_BaseBlock {
                         .setValue(WEST_CONNECT,state.getValue(WEST))
                         .setValue(UP_CONNECT,state.getValue(UP))
                         .setValue(DOWN_CONNECT,state.getValue(DOWN));
+            }
+            else if(takeItem.getItem() instanceof DyeItem dyeItem)
+            {
+                newState = state.setValue(COLOR,dyeItem.getDyeColor().getId()+1);
             }
             //NC
             if(state.equals(newState))
@@ -178,5 +185,23 @@ public class Cable_block extends Custom_BaseBlock {
             num|=0b100000;
         }
         return VoxelShapes[num];
+    }
+    //
+    @Override
+    protected BlockState NC_connect(BlockState state, Level level, BlockPos blockPos, Block block, BlockPos blockPos2, boolean bl)
+    {
+        int color = state.getValue(COLOR);
+        return state
+                .setValue(NORTH, canConnectTo(level.getBlockState(blockPos.north()),SOUTH_CONNECT,state,NORTH_CONNECT) && isColorTo(level.getBlockState(blockPos.north()),color))
+                .setValue(SOUTH,canConnectTo(level.getBlockState(blockPos.south()),NORTH_CONNECT,state,SOUTH_CONNECT) && isColorTo(level.getBlockState(blockPos.south()),color))
+                .setValue(WEST,canConnectTo(level.getBlockState(blockPos.west()),EAST_CONNECT,state,WEST_CONNECT) && isColorTo(level.getBlockState(blockPos.west()),color))
+                .setValue(EAST,canConnectTo(level.getBlockState(blockPos.east()),WEST_CONNECT,state,EAST_CONNECT) && isColorTo(level.getBlockState(blockPos.east()),color))
+                .setValue(UP,canConnectTo(level.getBlockState(blockPos.above()),DOWN_CONNECT,state,UP_CONNECT) && isColorTo(level.getBlockState(blockPos.above()),color))
+                .setValue(DOWN,canConnectTo(level.getBlockState(blockPos.below()),UP_CONNECT,state,DOWN_CONNECT) && isColorTo(level.getBlockState(blockPos.below()),color));
+    }
+
+    private boolean isColorTo(BlockState state,int color)
+    {
+        return color == 0 || state.getOptionalValue(COLOR).orElse(0) == 0 || state.getValue(COLOR) == color;
     }
 }

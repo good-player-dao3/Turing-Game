@@ -86,13 +86,14 @@ public abstract class Custom_BaseBlock extends Block {
         if(level.isClientSide())
             return;
         BlockState newState = NC_static(
-                state
-                        .setValue(NORTH,canConnectTo(level.getBlockState(blockPos.north()),SOUTH_CONNECT,state,NORTH_CONNECT))
-                        .setValue(SOUTH,canConnectTo(level.getBlockState(blockPos.south()),NORTH_CONNECT,state,SOUTH_CONNECT))
-                        .setValue(WEST,canConnectTo(level.getBlockState(blockPos.west()),EAST_CONNECT,state,WEST_CONNECT))
-                        .setValue(EAST,canConnectTo(level.getBlockState(blockPos.east()),WEST_CONNECT,state,EAST_CONNECT))
-                        .setValue(UP,canConnectTo(level.getBlockState(blockPos.above()),DOWN_CONNECT,state,UP_CONNECT))
-                        .setValue(DOWN,canConnectTo(level.getBlockState(blockPos.below()),UP_CONNECT,state,DOWN_CONNECT)),
+                NC_connect(
+                        state,
+                        level,
+                        blockPos,
+                        block,
+                        blockPos2,
+                        bl
+                ),
                 //More
                 level,
                 blockPos,
@@ -104,6 +105,18 @@ public abstract class Custom_BaseBlock extends Block {
         {
             level.setBlockAndUpdate(blockPos,newState);
         }
+    }
+
+    /**NC更新时的连接器*/
+    protected BlockState NC_connect(BlockState state, Level level, BlockPos blockPos, Block block, BlockPos blockPos2, boolean bl)
+    {
+        return state
+                .setValue(NORTH,canConnectTo(level.getBlockState(blockPos.north()),SOUTH_CONNECT,state,NORTH_CONNECT))
+                .setValue(SOUTH,canConnectTo(level.getBlockState(blockPos.south()),NORTH_CONNECT,state,SOUTH_CONNECT))
+                .setValue(WEST,canConnectTo(level.getBlockState(blockPos.west()),EAST_CONNECT,state,WEST_CONNECT))
+                .setValue(EAST,canConnectTo(level.getBlockState(blockPos.east()),WEST_CONNECT,state,EAST_CONNECT))
+                .setValue(UP,canConnectTo(level.getBlockState(blockPos.above()),DOWN_CONNECT,state,UP_CONNECT))
+                .setValue(DOWN,canConnectTo(level.getBlockState(blockPos.below()),UP_CONNECT,state,DOWN_CONNECT));
     }
 
     /**NC更新时的方块状态设置*/

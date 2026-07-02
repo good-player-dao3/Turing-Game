@@ -7,6 +7,7 @@ import org.slf4j.LoggerFactory;
 import net.fabricmc.api.ModInitializer;
 
 import turing.game.Nodes.ExampleClass;
+import turing.game.Rules.Rules;
 
 public class TGTuringGame implements ModInitializer {
 	public static final String MOD_ID = "tgturing-game";
@@ -24,8 +25,8 @@ public class TGTuringGame implements ModInitializer {
 
 		LOGGER.info("Hello Fabric world!");
 
-		ExampleClass ans = new ExampleClass();
-		ans.ExampleModels();
+		ExampleClass.ExampleModels();
+		Rules.Initialize();
 	}
 
 	public static ResourceLocation id(String name)

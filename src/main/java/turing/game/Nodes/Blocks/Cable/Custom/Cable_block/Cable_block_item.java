@@ -23,6 +23,7 @@ public class Cable_block_item extends BlockItem {
     public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> tooltip, TooltipFlag type) {
         tooltip.addLast(Component.translatable("itemTooltip.tgturing-game.cable_1"));
         tooltip.addLast(Component.translatable("itemTooltip.tgturing-game.cable_2"));
+        tooltip.addLast(Component.translatable("itemTooltip.tgturing-game.cable_3"));
     }
 
     public static void Setting_Item()

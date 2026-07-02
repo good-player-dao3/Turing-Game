@@ -6,7 +6,7 @@ import turing.game.Nodes.Items.Items;
 
 public class ExampleClass {
     //@Override
-    public void ExampleModels() {
+    public static void ExampleModels() {
         Blocks.initialize();
         Items.initialize();
         Groups.init();

@@ -18,6 +18,7 @@
     "block.tgturing-game.cable": "导管",
     "itemTooltip.tgturing-game.cable_1": "使用§l皮革§r[右键]可以§l包皮§r，固定朝向",
     "itemTooltip.tgturing-game.cable_2": "§l扳手§r[右键]可以§l拆包皮§r或§l控制连接§r",
+    "itemTooltip.tgturing-game.cable_3": "§l染料§r[右键]可以§l上色§r,不同颜色不可以相互连接",
 
     "item.tgturing-game.get_static_stick": "状态权杖",
 

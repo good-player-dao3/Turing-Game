@@ -2,8 +2,9 @@
 	"required": true,
 	"package": "turing.game.mixin",
 	"compatibilityLevel": "JAVA_21",
-	"mixins": [
-		"ExampleMixin"
+	"mixins": [],
+	"server": [
+		"Better_powered_rail"
 	],
 	"injectors": {
 		"defaultRequire": 1
