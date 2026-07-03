@@ -35,7 +35,7 @@
     "block.tgturing-game.cable_power_to_redstone": "输出红石器",
     "block.tgturing-game.redstone_to_cable_power": "输入红石器",
     
-    "block.tgturing-game.rom": "ROM",
+    "block.tgturing-game.rom": "读书机",
     "block.tgturing-game.print": "打印机",
     "block.tgturing-game.t_stored": "T型触发器",
     "block.tgturing-game.bit_stored": "锁存器",
@@ -52,7 +52,7 @@
     "advancements.tg.description_cable": "玩电路一定要节制！",
     "advancements.tg.title_print": "打印机（脉冲打印）",
     "advancements.tg.description_print": "可以打印0或1的打印机",
-    "advancements.tg.title_rom": "ROM（脉冲读取）",
+    "advancements.tg.title_rom": "读书机（脉冲读取）",
     "advancements.tg.description_rom": "不错的读书机§m即使只能读0或1§r",
     "advancements.tg.title_wrench": "扳手",
     "advancements.tg.description_wrench": "狂拆！狂拆！",

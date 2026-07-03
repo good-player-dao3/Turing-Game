@@ -3,7 +3,7 @@
 	"id": "tgturing-game",
 	"version": "${version}",
 	"name": "[TG]Turing Game",
-	"description": "这是一个计算机mod（？）\n怎么玩？点击“源码”或“网站”查看相关内容",
+	"description":"这是一个计算机mod（？）\n怎么玩？点击“源码”或“网站”查看相关内容\n\nThis is a computer mod.How do you play it?\nClick 'Source Code' or 'Website' to view related content.\n(Use machine translation in English)",
 	"authors": [
 		"一个疯子"
 	],

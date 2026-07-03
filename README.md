@@ -1,5 +1,10 @@
 # [TG]Turing Game
 
+## 语言
+
+- [English](README_EN-US.md)
+- [中文](README.md)
+
 ## 这是一个提供逻辑门的mod
 
 额，还有什么可以说的呢？  

@@ -7,7 +7,66 @@
 
     "item.tgturing-game.wrench": "Wrench",
 
+    "block.tgturing-game.button_block": "Button",
+
     "block.tgturing-game.test_block": "Test Block",
+
+    "itemTooltip.tgturing-game.wrench_1": "[Shift+Right Click] to dismantle blocks",
+
+    "block.tgturing-game.arrow_block": "Arrow Block",
+    "itemTooltip.tgturing-game.arrow_block_1": "§l[Right Click]§r to change direction",
+    "itemTooltip.tgturing-game.arrow_block_2": "§lRedstone pulse§r can also change direction",
+    "itemTooltip.tgturing-game.arrow_block_3": "Can be detected by §lcomparator§r for current state",
+
+    "block.tgturing-game.cable": "Cable",
+    "itemTooltip.tgturing-game.cable_1": "Use §lleather§r [Right Click] to §lwrap§r it, fixing orientation",
+    "itemTooltip.tgturing-game.cable_2": "§lWrench§r [Right Click] to §lunwrap§r or §lcontrol connections§r",
+    "itemTooltip.tgturing-game.cable_3": "§lDye§r [Right Click] to §lcolor§r; different colors cannot connect to each other",
+
+    "item.tgturing-game.get_static_stick": "State Staff",
+    "block.tgturing-game.cable_lamp": "Lamp",
+
+    "block.tgturing-game.gat": "Buffer",
+    "block.tgturing-game.and_gat": "AND Gate",
+    "block.tgturing-game.or_gat": "OR Gate",
+    "block.tgturing-game.not_gat": "NOT Gate",
+    "block.tgturing-game.xor_gat": "XOR Gate",
+
+    "block.tgturing-game.cable_power_to_redstone": "Redstone Output",
+    "block.tgturing-game.redstone_to_cable_power": "Redstone Input",
+
+    "block.tgturing-game.rom": "Reader",
+    "block.tgturing-game.print": "Printer",
+    "block.tgturing-game.t_stored": "T Flip-Flop",
+    "block.tgturing-game.bit_stored": "Latch",
+
+    "advancements.tg.title_test_item": "Turing Game §m(Undefiled Tech)§r",
+    "advancements.tg.description_test_item": "Undefiled Tech, engage!",
+    "advancements.tg.title_test_food": "What does it mean?",
+    "advancements.tg.description_test_food": "What is this? Why is my screen showing nothing?",
+    "advancements.tg.title_test_block": "Undefiled Block",
+    "advancements.tg.description_test_block": "A nice helper block?",
+    "advancements.tg.title_arrow_block": "Arrow Block",
+    "advancements.tg.description_arrow_block": "Who needs terracotta!",
+    "advancements.tg.title_cable": "Cable",
+    "advancements.tg.description_cable": "Always practice moderation with circuits!",
+    "advancements.tg.title_print": "Printer (Pulse Printing)",
+    "advancements.tg.description_print": "A printer that can print 0 or 1",
+    "advancements.tg.title_rom": "Reader (Pulse Reading)",
+    "advancements.tg.description_rom": "A nice reading machine §meven if it only reads 0 or 1§r",
+    "advancements.tg.title_wrench": "Wrench",
+    "advancements.tg.description_wrench": "Wreck! Wreck!",
+
+    "advancements.tg.title_gat": "Buffer",
+    "advancements.tg.description_gat": "A little toy with 1gt delay",
+    "advancements.tg.title_not_gat": "NOT Gate",
+    "advancements.tg.description_not_gat": "0 -> 1\n1 -> 0",
+    "advancements.tg.title_or_gat": "OR Gate",
+    "advancements.tg.description_or_gat": "0,0 -> 0\n1,0 -> 1\n1,1 -> 1",
+    "advancements.tg.title_and_gat": "AND Gate",
+    "advancements.tg.description_and_gat": "0,0 -> 0\n1,0 -> 0\n1,1 -> 1",
+    "advancements.tg.title_xor_gat": "XOR Gate",
+    "advancements.tg.description_xor_gat": "0,0 -> 0\n1,0 -> 1\n1,1 -> 0",
 
     "itemGroup.tgturing-game.group": "Turing Game"
 }
