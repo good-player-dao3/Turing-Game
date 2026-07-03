@@ -1,5 +1,7 @@
 # [TG] Turing Game
 
+![Texture](./texture.png)
+
 ## Languages
 
 - [English](README_EN-US.md)

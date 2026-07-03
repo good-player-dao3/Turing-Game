@@ -2,8 +2,8 @@
 	"format_version": "1.21.1",
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "cable_connection_up.json",
-		"particle": "tgturing-game:block/cable/cable_connectione"
+		"0": "tgturing-game:block/cable/cable_connection",
+		"particle": "tgturing-game:block/cable/cable_connection"
 	},
 	"elements": [
 		{

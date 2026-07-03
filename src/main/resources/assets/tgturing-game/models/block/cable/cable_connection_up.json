@@ -3,7 +3,7 @@
 	"credit": "Made with Blockbench",
 	"textures": {
 		"0": "tgturing-game:block/cable/cable_connection",
-		"particle": "tgturing-game:block/cable/cable_connectione"
+		"particle": "tgturing-game:block/cable/cable_connection"
 	},
 	"elements": [
 		{

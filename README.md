@@ -1,5 +1,7 @@
 # [TG]Turing Game
 
+![宣传图](./texture.png)
+
 ## 语言
 
 - [English](README_EN-US.md)
