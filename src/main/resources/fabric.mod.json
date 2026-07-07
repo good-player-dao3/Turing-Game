@@ -25,13 +25,6 @@
 			"turing.game.client.TGTuringGameDataGenerator"
 		]
 	},
-	"mixins": [
-		"tgturing-game.mixins.json",
-		{
-			"config": "tgturing-game.client.mixins.json",
-			"environment": "client"
-		}
-	],
 	"depends": {
 		"fabricloader": ">=0.19.2",
 		"minecraft": "~1.21.1",

@@ -13,10 +13,10 @@ repositories {
 	// See https://docs.gradle.org/current/userguide/declaring_repositories.html
 	// for more information about repositories.
 
-	maven {
-		name = "CurseForge"
-		url = "https://cursemaven.com"
-	}
+//	maven {
+//		name = "CurseForge"
+//		url = "https://cursemaven.com"
+//	}
 }
 
 loom {
@@ -28,7 +28,6 @@ loom {
 			sourceSet sourceSets.client
 		}
 	}
-
 }
 
 fabricApi {

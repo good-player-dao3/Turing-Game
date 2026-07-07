@@ -9,12 +9,14 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.item.DyeColor;
 import turing.game.Nodes.Blocks.Cable.Cable;
 import turing.game.Nodes.Blocks.Cable.Custom.Cable_block.Cable_block;
+import turing.game.TGTuringGame;
 
 @Environment(EnvType.CLIENT)
 public class TGTuringGameClient implements ClientModInitializer {
 	@Override
 	public void onInitializeClient() {
 		// This entrypoint is suitable for setting up client-specific logic, such as rendering.
+		TGTuringGame.LOGGER.info("Client initialization STARTED");
 
 		BlockRenderLayerMap.INSTANCE.putBlock(Cable.CABLE,RenderType.cutout());
 		BlockRenderLayerMap.INSTANCE.putBlock(Cable.GAT,RenderType.cutout());
@@ -24,7 +26,7 @@ public class TGTuringGameClient implements ClientModInitializer {
 		BlockRenderLayerMap.INSTANCE.putBlock(Cable.XOR_GAT,RenderType.cutout());
 		BlockRenderLayerMap.INSTANCE.putBlock(Cable.CABLE_POWER_TO_REDSTONE,RenderType.cutout());
 		BlockRenderLayerMap.INSTANCE.putBlock(Cable.REDSTONE_TO_CABLE_POWER,RenderType.cutout());
-
+		TGTuringGame.LOGGER.info("Client initialization STARTED - 1");
 		//Cable
 		ColorProviderRegistry.BLOCK.register(
 				(state,world,pos,tintIndex) -> {
@@ -38,5 +40,7 @@ public class TGTuringGameClient implements ClientModInitializer {
 				},
 				Cable.CABLE
 		);
+
+		TGTuringGame.LOGGER.info("onInitializeClient() over");
 	}
 }

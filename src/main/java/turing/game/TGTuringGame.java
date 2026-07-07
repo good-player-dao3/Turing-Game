@@ -23,10 +23,12 @@ public class TGTuringGame implements ModInitializer {
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
 
-		LOGGER.info("Hello Fabric world!");
+		LOGGER.info("onInitialize()");
 
 		ExampleClass.ExampleModels();
 		Rules.Initialize();
+
+		LOGGER.info("onInitialize() over");
 	}
 
 	public static ResourceLocation id(String name)

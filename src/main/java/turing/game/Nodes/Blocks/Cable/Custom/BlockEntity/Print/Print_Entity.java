@@ -38,7 +38,7 @@ public class Print_Entity extends BlockEntity {
         ContainerHelper.saveAllItems(compoundTag,items,provider);
         compoundTag.putInt("readPoint",readPoint);
         compoundTag.putBoolean("oldInput",oldInput);
-        compoundTag.putString("input",out.toString());
+        compoundTag.putString("out",out.toString());
         compoundTag.putInt("emptyChars",emptyChars);
         super.saveAdditional(compoundTag,provider);
     }
